@@ -157,6 +157,11 @@ h1.inner-circle {
 
 @font-face {
   font-family:"Neutraface";
-  src: url('./assets/fonts/NeutraDisplay-Bold.ttf') 
+  src: url('./assets/fonts/NeutraDisplay-Bold.ttf')
 }
 
+.logo {
+  height: 100px;
+  width: 200px;
+  background-image: url('./assets/MoonAge-Logo--VectorFile.svg');
+}

@@ -35,7 +35,7 @@ export default class LandingPage extends Component {
       <a href="#news"><div className="content circle red daydream">
         <h1 className="inner-circle">Daydream</h1>
       </div></a>
-      <div className="logo" />
+      
       </React.Fragment>
 
     )
