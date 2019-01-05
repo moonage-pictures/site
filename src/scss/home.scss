@@ -1,10 +1,4 @@
-body {
-  background-color: black;
-  height: 100vh;
-  width: 100%;
-}
-
-
+@import './common/fonts.scss';
 
 .company {
   position: absolute;
@@ -152,15 +146,3 @@ h1.inner-circle {
   font-family: "Neutraface", sans-serif;
   font-size: 2.75rem;
 }
-
-.logo {
-  height: 20vh;
-  width: 30vh;
-}
-
-@font-face {
-  font-family:"Neutraface";
-  color: black;
-  src: url('./assets/fonts/NeutraDisplay-Bold.ttf')
-}
-

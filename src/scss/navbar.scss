@@ -1,0 +1,22 @@
+@import './common/fonts.scss';
+
+nav.navbar {
+  background-color: black;
+  height: 18vh;
+  margin: 0 auto;
+  border-bottom: 1px solid white;
+}
+
+.navbar-end .navbar-item {
+  font-family: "Neutraface", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.75rem;
+}
+
+.navbar-end .navbar-item:hover {
+  /* background-color: red; */
+  /* color: black; */
+}
