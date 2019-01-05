@@ -1,13 +1,9 @@
-html {
+body {
   background-color: black;
   height: 100vh;
   width: 100%;
 }
 
-.content {
-  font-family: "Neutraface", sans-serif;
-  font-size: 1.2rem;
-}
 
 
 .company {
@@ -149,19 +145,22 @@ html {
 }
 h1.inner-circle {
   position: relative;
-  top: 35%;
+  top: 40%;
   left: 0%;
   color: black;
   text-transform: uppercase;
+  font-family: "Neutraface", sans-serif;
+  font-size: 2.75rem;
+}
+
+.logo {
+  height: 20vh;
+  width: 30vh;
 }
 
 @font-face {
   font-family:"Neutraface";
+  color: black;
   src: url('./assets/fonts/NeutraDisplay-Bold.ttf')
 }
 
-.logo {
-  height: 100px;
-  width: 200px;
-  background-image: url('./assets/MoonAge-Logo--VectorFile.svg');
-}
