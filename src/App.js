@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bulma/css/bulma.css";
 import Home from "./components/Home";
 import News from "./components/News";
+import Shows from "./components/Shows";
 import Company from "./components/Company";
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/company" component={Company} />
           <Route path="/news" component={News} />
+          <Route path="/shows" component={Shows} />
         </Switch>
         </Fragment>
       </BrowserRouter>

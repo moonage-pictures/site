@@ -21,7 +21,7 @@ export default class Company extends Component {
               both programme sellers and buyers. They have produced, between
               them, dramas including <em>Peaky Blinders</em>, <em>Ripper Street</em>, <em>Fortitude</em>,
               <em>Marvellous</em> and <em>The Good Karma Hospital</em>. </p>
-              <p>At Moonage Pictures they
+              <p className="body-font">At Moonage Pictures they
               are focused on creating, original, unconventional, inventive
               programming. Their first production is <em>Curfew</em>, an eight-part
               series created and written by Matthew that will be launching on

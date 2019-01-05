@@ -1,16 +1,26 @@
-@import './fonts.scss';
+@import "./fonts.scss";
 
+#root {
+  background-color: black;
+}
 
 body {
   background-color: black;
   height: 100vh;
-  width: 100%;
 }
 
 .column {
   p {
-  font-family: $body-font;
+    font-family: $body-font;
+    color: white;
+    font-size: 1.25rem;
+    margin: 1rem;
+  }
+}
+
+.column h1 {
+  font-family: $heading-font;
   color: white;
-  font-size: 1.25rem;
-  margin: 1rem;
-}}
+  text-transform: uppercase;
+  font-size: 3rem;
+}
