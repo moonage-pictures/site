@@ -18,9 +18,12 @@ body {
   }
 }
 
-.column h1 {
-  font-family: $heading-font;
-  color: white;
-  text-transform: uppercase;
-  font-size: 3rem;
+.section {
+  h1, h2, h3 {
+    font-family: $heading-font;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: white;
+  }
 }
+

@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import News from "./components/News";
 import Shows from "./components/Shows";
 import Company from "./components/Company";
+import People from "./components/People";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path="/company" component={Company} />
           <Route path="/news" component={News} />
           <Route path="/shows" component={Shows} />
+          <Route path="/people" component={People} />
         </Switch>
         </Fragment>
       </BrowserRouter>
