@@ -21,7 +21,7 @@ export default class Contact extends Component {
               <div className="column is-one-third-desktop">
                 <h2 className="title is-2">Telephone</h2>
                 <p className="body-font">
-                  <a href="tel:+4420 8127 5574" style={{ color: "white" }}>
+                  <a href="tel:+4420 8127 5574" style={{ color: "white", borderBottom: "1px solid white"}}>
                     020 8127 5574
                   </a>
                 </p>
@@ -31,7 +31,7 @@ export default class Contact extends Component {
                 <p className="body-font">
                   <a
                     href="mailto:office@moonagepictures.com"
-                    style={{ color: "white" }}
+                    style={{ color: "white", borderBottom: "1px solid white" }}
                   >
                     office@moonagepictures.com
                   </a>
