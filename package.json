@@ -2,7 +2,7 @@
   "name": "landing-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://richardtzanov.com/landing-page",
+  "homepage": "https://richardtzanov.com/landing-page/",
   "dependencies": {
     "bulma": "^0.7.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.9",
