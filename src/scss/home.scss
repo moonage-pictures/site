@@ -1,4 +1,5 @@
 @import './common/fonts.scss';
+@import './common/colors.scss';
 
 .company {
   position: absolute;
@@ -106,26 +107,26 @@
 }
 
 .pumpkin {
-  background-color: #FF7F11
+  background-color: $pumpkin;
 }
 
 .white {
-  background-color: white;
+  background-color:$white;
 }
 .green {
-  background-color: #4c934c;
+  background-color: $green;
 }
 
 .yellow {
-  background-color: #ffb30f;
+  background-color: $yellow;
 }
 
 .blue {
-  background-color: #009fb7;
+  background-color: $blue;
 }
 
 .pink {
-  background-color: #db6c79;
+  background-color: $pink;
 }
 
 
@@ -135,7 +136,7 @@
 }
 
 .red {
-  background-color: #f32910;
+  background-color: $red;
 }
 h1.inner-circle {
   position: relative;

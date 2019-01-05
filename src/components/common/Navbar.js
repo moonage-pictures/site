@@ -40,8 +40,23 @@ export default class Navbar extends Component {
           className={`navbar-menu${this.state.navbarOpen ? " is-active" : ""}`}
         >
           <div className="navbar-end">
-            <Link to="/news" className="navbar-item">
+          <Link to="/company" className="navbar-item company-nav">
+              Company
+            </Link>
+            <Link to="/news" className="navbar-item news-nav">
               News
+            </Link>
+            <Link to="/shows" className="navbar-item shows-nav">
+              Shows
+            </Link>
+            <Link to="/people" className="navbar-item people-nav">
+              People
+            </Link>
+            <Link to="/daydream" className="navbar-item daydream-nav">
+              Daydream
+            </Link>
+            <Link to="/contact" className="navbar-item contact-nav">
+              Contact
             </Link>
             <Link to="/">
               <img

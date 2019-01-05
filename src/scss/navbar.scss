@@ -1,4 +1,5 @@
 @import './common/fonts.scss';
+@import './common/colors.scss';
 
 nav.navbar {
   background-color: black;
@@ -7,16 +8,56 @@ nav.navbar {
   border-bottom: 1px solid white;
 }
 
-.navbar-end .navbar-item {
-  font-family: "Neutraface", sans-serif;
-  text-transform: uppercase;
-  color: white;
-  display: flex;
-  align-items: flex-end;
-  font-size: 1.75rem;
-}
-
-.navbar-end .navbar-item:hover {
-  /* background-color: red; */
-  /* color: black; */
-}
+.navbar-end {
+  .navbar-item {
+    font-family: "Neutraface", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.75rem;
+  
+  }
+  .news-nav {
+    &:hover {
+      background-color: $blue;
+      margin-top: 10vh;
+      color: black;
+    }
+  }
+  .company-nav {
+    &:hover {
+      background-color: $red;
+      margin-top: 10vh;
+      color: black;
+    }
+  }
+  .shows-nav {
+    &:hover {
+      background-color: $pink;
+      margin-top: 10vh;
+      color: black;
+    }
+  }
+  .people-nav {
+    &:hover {
+      background-color: $pumpkin;
+      margin-top: 10vh;
+      color: black;
+    }
+  }
+  .daydream-nav {
+    &:hover {
+      background-color: $red;
+      margin-top: 10vh;
+      color: black;
+    }
+  }
+  .contact-nav {
+    &:hover {
+      background-color: $white;
+      margin-top: 10vh;
+      color: black;
+    }
+  }
+} 
