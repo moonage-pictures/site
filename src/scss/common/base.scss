@@ -27,3 +27,14 @@ body {
   }
 }
 
+footer {
+  background-color: black;
+  width: 100%;
+ 
+  .footer-content {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+}

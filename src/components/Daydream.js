@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Navbar from './common/Navbar'
+import Footer from './common/Footer'
 
 export default class Daydream extends Component {
   render() {
@@ -17,6 +18,7 @@ export default class Daydream extends Component {
         </div>
         </section>
       </div>
+      <Footer />
       </Fragment>
     );
   }

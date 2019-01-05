@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Navbar from './common/Navbar'
+import Footer from './common/Footer'
 
 export default class People extends Component {
   render() {
@@ -26,6 +27,7 @@ export default class People extends Component {
         </div>
         </section>
       </div>
+      <Footer />
       </Fragment>
     );
   }

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import ReactPlayer from "react-player";
 import Navbar from "./common/Navbar";
+import Footer from "./common/Footer";
 import curfewLogo from "../assets/images/curfew/curfew-logo-red.jpg";
 import curfewPoster from "../assets/images/curfew/curfew-poster.jpg";
 
@@ -36,6 +37,7 @@ export default class Shows extends Component {
               </div>
           </section>
         </div>
+        <Footer />
       </Fragment>
     );
   }
