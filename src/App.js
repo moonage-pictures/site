@@ -12,7 +12,7 @@ import Contact from "./components/Contact";
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Fragment>
         <Switch>
           <Route exact path="/" component={Home} />
