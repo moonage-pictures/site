@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 
-export default class Navbar extends Component {
+class Navbar extends Component {
   state = {
     navbarOpen: false
   };
@@ -109,3 +109,5 @@ export default class Navbar extends Component {
     );
   }
 }
+
+export default withRouter(Navbar)

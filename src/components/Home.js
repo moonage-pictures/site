@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class LandingPage extends Component {
+export default class Home extends Component {
   render() {
     return (
       <React.Fragment>
