@@ -12,29 +12,40 @@ export default class Shows extends Component {
         <Navbar />
         <div className="container">
           <section className="section">
-            <h1 className="title is-1">Curfew</h1>
-            <h2 className="title is-2">Images: </h2>
-            
-            <div className="columns is-multiline">
+            <div className="columns is-centered is-multiline">
+              <div className="column is-two-thirds-desktop ">
+                <h1 className="section-header">Shows</h1>
+              </div>
+              </div>
+              <div className="columns is-centered is-multiline">
               <div className="column is-one-third">
                 <figure className="image is-16by9">
                   <img src={curfewLogo} alt="Curfew logo" />
                 </figure>
               </div>
+              </div>
+              <div className="columns is-centered">
+              <div className="column is-half">
+                  <ReactPlayer url="https://www.youtube.com/watch?v=hr3EBylHfIQ" />
+              </div>
+             
+
+
+              {/* <div className="column is-full-width">
+                
+                </div>
+                
               <div className="column is-one-third">
                 <figure className="image is-3by4">
                   <img src={curfewPoster} alt="Curfew poster" />
                 </figure>
               </div>
-              </div>
 
-
-            <h2 className="title is-2">Trailer: </h2>
+              <h2 className="title is-2">Trailer: </h2>
               <div className="columns is-centered">
-                <div className="column is-two-thirds">
-                  <ReactPlayer url="https://www.youtube.com/watch?v=hr3EBylHfIQ" />
-                </div>
-              </div>
+                
+              </div> */}
+            </div>
           </section>
         </div>
         <Footer />

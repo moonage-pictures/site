@@ -11,6 +11,8 @@ export default class People extends Component {
       <section className="section">
         <div className="columns is-centered is-multiline">
           <div className="column is-two-thirds-desktop ">
+          <h1 className="title is-1" style={{marginTop: "2rem", borderBottom: "1px solid white"}}>People</h1>
+
           <h2 className="title is-2">Frith Tiplady</h2>
           <h3 className="subtitle is-3">Founder and Executive Producer</h3>
             <p className="body-font">

@@ -9,8 +9,11 @@ export default class Contact extends Component {
         <Navbar />
         <div className="container">
           <section className="section">
+          <h1 className="title is-1" style={{marginTop: "2rem"}}>Contact</h1>
+
             <div className="columns">
               <div className="column is-one-third-desktop">
+              
                 <h2 className="title is-2">Address</h2>
                 <p className="body-font">
                   181 Wardour St

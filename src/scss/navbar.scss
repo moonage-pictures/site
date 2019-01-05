@@ -44,25 +44,25 @@ nav.navbar {
   }
   .shows-nav {
     &:hover {
-      background-color: $pink;
+      background-color: $red;
       margin-top: 10vh;
       color: black;
     }
   }
   .shows-active {
-    background-color: $pink;
+    background-color: $red;
     margin-top: 10vh;
     color: black;
   }
   .people-nav {
     &:hover {
-      background-color: $pumpkin;
+      background-color: $white;
       margin-top: 10vh;
       color: black;
     }
   }
   .people-active {
-    background-color: $pumpkin;
+    background-color: $white;
     margin-top: 10vh;
     color: black;
   }
@@ -80,13 +80,13 @@ nav.navbar {
   }
   .contact-nav {
     &:hover {
-      background-color: $white;
+      background-color: $green;
       margin-top: 10vh;
       color: black;
     }
   }
   .contact-active {
-    background-color: $white;
+    background-color: $green;
     margin-top: 10vh;
     color: black;
   }

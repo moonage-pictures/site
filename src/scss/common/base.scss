@@ -1,4 +1,5 @@
 @import "./fonts.scss";
+@import "./colors.scss";
 
 #root {
   background-color: black;
@@ -7,6 +8,10 @@
 body {
   background-color: black;
   height: 100vh;
+}
+
+div.container {
+  margin-top: 15vh;
 }
 
 .column {
@@ -19,18 +24,28 @@ body {
 }
 
 .section {
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: $heading-font;
     text-transform: uppercase;
     font-size: 3rem;
     color: white;
+  }
+  .section-header {
+    border-bottom: 1px solid white;
+    margin-top: 2rem;
   }
 }
 
 footer {
   background-color: black;
   width: 100%;
- 
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 10vh;
+
   .footer-content {
     margin: 0 auto;
     width: 90%;

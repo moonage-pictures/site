@@ -10,7 +10,7 @@
 .company {
   position: absolute;
   top: 5vw;
-  left: 2vw;
+  left: 2 vw;
   width: 26vw;
   height: 26vw;
 }
@@ -23,7 +23,7 @@
   height: 15vw;
 }
 
-.shows {
+.logo-pos {
   position: absolute;
   top: 3vw;
   left: 70vw;
@@ -31,7 +31,7 @@
   height: 20vw;
 }
 
-.contact {
+.people {
   position: absolute;
   top: 32vw;
   left: 14vw;
@@ -39,7 +39,7 @@
   height: 15vw;
 }
 
-.people {
+.contact {
   position: absolute;
   top: 32vw;
   left: 45vw;
@@ -47,7 +47,7 @@
   height: 16vw
 }
 
-.daydream {
+.shows {
   position: absolute;
   top: 26vw;
   left: 72vw;
@@ -88,7 +88,7 @@
   height: 9vw;
 }
 
-.blank-five {
+.daydream {
   position: absolute;
   top: 40vw;
   left: 62vw;
@@ -143,6 +143,12 @@
 
 .red {
   background-color: $red;
+}
+
+.home-logo {
+  position: relative;
+  top: 13%;
+  left: 0%;
 }
 h1.inner-circle {
   position: relative;

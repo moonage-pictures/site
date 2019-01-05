@@ -9,8 +9,11 @@ export default class Company extends Component {
         <Navbar />
         <div className="container">
           <section className="section">
+          
             <div className="columns is-centered">
+           
               <div className="column is-two-thirds-desktop ">
+              <h1 className="section-header">Company</h1>
                 <p className="body-font">
                   Moonage Pictures was founded in March 2018 by former BBC Drama
                   Commissioner Matthew Read, Will Gould (Co-MD Tiger Aspect) and

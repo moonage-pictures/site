@@ -19,7 +19,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar" role="navigation" aria-label="main-naivagation">
+      <nav className="navbar is-fixed-top" role="navigation" aria-label="main-naivagation">
         <div className="navbar-brand">
           <a
             className={`navbar-burger${
