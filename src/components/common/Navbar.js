@@ -40,22 +40,60 @@ export default class Navbar extends Component {
           className={`navbar-menu${this.state.navbarOpen ? " is-active" : ""}`}
         >
           <div className="navbar-end">
-          <Link to="/company" className="navbar-item company-nav">
+            <Link
+              to="/company"
+              className={`navbar-item company-nav ${
+                this.props.location.pathname === "/company"
+                  ? "company-active"
+                  : ""
+              }`}
+            >
               Company
             </Link>
-            <Link to="/news" className="navbar-item news-nav">
+            <Link
+              to="/news"
+              className={`navbar-item news-nav ${
+                this.props.location.pathname === "/news" ? "news-active" : ""
+              }`}
+            >
               News
             </Link>
-            <Link to="/shows" className="navbar-item shows-nav">
+            <Link
+              to="/shows"
+              className={`navbar-item shows-nav ${
+                this.props.location.pathname === "/shows" ? "shows-active" : ""
+              }`}
+            >
               Shows
             </Link>
-            <Link to="/people" className="navbar-item people-nav">
+            <Link
+              to="/people"
+              className={`navbar-item people-nav ${
+                this.props.location.pathname === "/people"
+                  ? "people-active"
+                  : ""
+              }`}
+            >
               People
             </Link>
-            <Link to="/daydream" className="navbar-item daydream-nav">
+            <Link
+              to="/daydream"
+              className={`navbar-item daydream-nav ${
+                this.props.location.pathname === "/daydream"
+                  ? "daydream-active"
+                  : ""
+              }`}
+            >
               Daydream
             </Link>
-            <Link to="/contact" className="navbar-item contact-nav">
+            <Link
+              to="/contact"
+              className={`navbar-item contact-nav ${
+                this.props.location.pathname === "/contact"
+                  ? "contact-active"
+                  : ""
+              }`}
+            >
               Contact
             </Link>
             <Link to="/">

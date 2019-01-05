@@ -10,7 +10,7 @@ nav.navbar {
 
 .navbar-end {
   .navbar-item {
-    font-family: "Neutraface", sans-serif;
+    font-family: $heading-font;
     text-transform: uppercase;
     color: white;
     display: flex;
@@ -25,12 +25,22 @@ nav.navbar {
       color: black;
     }
   }
+  .news-active {
+    background-color: $blue;
+    margin-top: 10vh;
+    color: black;
+  }
   .company-nav {
     &:hover {
       background-color: $red;
       margin-top: 10vh;
       color: black;
     }
+  }
+  .company-active {
+    background-color: $red;
+    margin-top: 10vh;
+    color: black;
   }
   .shows-nav {
     &:hover {
@@ -39,12 +49,22 @@ nav.navbar {
       color: black;
     }
   }
+  .shows-active {
+    background-color: $pink;
+    margin-top: 10vh;
+    color: black;
+  }
   .people-nav {
     &:hover {
       background-color: $pumpkin;
       margin-top: 10vh;
       color: black;
     }
+  }
+  .people-active {
+    background-color: $pumpkin;
+    margin-top: 10vh;
+    color: black;
   }
   .daydream-nav {
     &:hover {
@@ -53,11 +73,21 @@ nav.navbar {
       color: black;
     }
   }
+  .daydream-active {
+    background-color: $red;
+    margin-top: 10vh;
+    color: black;
+  }
   .contact-nav {
     &:hover {
       background-color: $white;
       margin-top: 10vh;
       color: black;
     }
+  }
+  .contact-active {
+    background-color: $white;
+    margin-top: 10vh;
+    color: black;
   }
 } 
