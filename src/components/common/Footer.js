@@ -17,7 +17,7 @@ export default class Footer extends Component {
         <Link to="https://facebook.com">
           <FontAwesomeIcon
             icon={faFacebook}
-            size="5x"
+            size={(window.innerWidth >= 2880 && window.innerHeight >= 1800) ? "10x" : (window.innerWidth >= 2304 && window.innerHeight >= 1440) || (window.innerWidth === 1920 && window.innerHeight === 1200) ? "7x" : "5x"}
             color="white"
             style={{ paddingRight: "2rem" }}
           />
@@ -25,7 +25,7 @@ export default class Footer extends Component {
         <Link to="https://twitter.com/moonagepictures?lang=en">
           <FontAwesomeIcon
             icon={faTwitter}
-            size="5x"
+            size={(window.innerWidth >= 2880 && window.innerHeight >= 1800) ? "10x" : (window.innerWidth >= 2304 && window.innerHeight >= 1440) || (window.innerWidth === 1920 && window.innerHeight === 1200) ? "7x" : "5x"}
             color="white"
             style={{ paddingRight: "2rem" }}
           />
@@ -33,7 +33,7 @@ export default class Footer extends Component {
         <Link to="https://www.instagram.com/moonagepictures/">
           <FontAwesomeIcon
             icon={faInstagram}
-            size="5x"
+            size={(window.innerWidth >= 2880 && window.innerHeight >= 1800) ? "10x" : (window.innerWidth >= 2304 && window.innerHeight >= 1440) || (window.innerWidth === 1920 && window.innerHeight === 1200) ? "7x" : "5x"}
             color="white"
             style={{ paddingRight: "2rem" }}
           />
