@@ -10,7 +10,7 @@ export default class Home extends Component {
       <React.Fragment>
         <div className="home-wrapper">
           <Link to="/company">
-            <div className=" circle red company">
+            <div className="circle red company">
               <h1 className="inner-circle">Company</h1>
             </div>
           </Link>
@@ -38,7 +38,9 @@ export default class Home extends Component {
             </div>
           </Link>
           <Link to="/daydream">
-          <div className="circle yellow daydream" />
+          <div className="circle yellow daydream">
+          <h1 className="inner-circle">Daydream</h1>
+          </div>
           </Link>
 
           <Link to="/people">
