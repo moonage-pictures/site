@@ -14,7 +14,7 @@ export default class Footer extends Component {
     return (
       <footer>
         <div className="footer-content">
-        <Link to="https://facebook.com">
+        <Link to="https://www.facebook.com/MoonagePics/">
           <FontAwesomeIcon
             icon={faFacebook}
             size={(window.innerWidth >= 2880 && window.innerHeight >= 1800) ? "10x" : (window.innerWidth >= 2304 && window.innerHeight >= 1440) || (window.innerWidth === 1920 && window.innerHeight === 1200) ? "7x" : "5x"}
