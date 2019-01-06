@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "fd67fc34d3d710c99a03",
+    "revision": "02065b1383406b11c9ec",
     "url": "/landing-page/static/css/main.b6558511.chunk.css"
   },
   {
-    "revision": "fd67fc34d3d710c99a03",
-    "url": "/landing-page/static/js/main.fd67fc34.chunk.js"
+    "revision": "02065b1383406b11c9ec",
+    "url": "/landing-page/static/js/main.02065b13.chunk.js"
   },
   {
     "revision": "136b1da993074905314c",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/landing-page/static/media/NeutraDisplay-Bold.e3d878cd.ttf"
   },
   {
-    "revision": "7ea361e77c96350d99dda15667648dde",
+    "revision": "388a1666334694cc04362d9c450b48e0",
     "url": "/landing-page/index.html"
   }
 ];

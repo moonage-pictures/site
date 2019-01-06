@@ -1,7 +1,7 @@
 {
   "main.css": "/landing-page/static/css/main.b6558511.chunk.css",
-  "main.js": "/landing-page/static/js/main.fd67fc34.chunk.js",
-  "main.js.map": "/landing-page/static/js/main.fd67fc34.chunk.js.map",
+  "main.js": "/landing-page/static/js/main.02065b13.chunk.js",
+  "main.js.map": "/landing-page/static/js/main.02065b13.chunk.js.map",
   "static/css/1.fe7561c0.chunk.css": "/landing-page/static/css/1.fe7561c0.chunk.css",
   "static/js/1.136b1da9.chunk.js": "/landing-page/static/js/1.136b1da9.chunk.js",
   "static/js/1.136b1da9.chunk.js.map": "/landing-page/static/js/1.136b1da9.chunk.js.map",
@@ -11,9 +11,9 @@
   "static/media/curfew-poster.jpg": "/landing-page/static/media/curfew-poster.f7bed685.jpg",
   "static/media/curfew-logo-red.jpg": "/landing-page/static/media/curfew-logo-red.e695f269.jpg",
   "static/media/index.scss": "/landing-page/static/media/NeutraDisplay-Bold.e3d878cd.ttf",
-  "static/css/1.fe7561c0.chunk.css.map": "/landing-page/static/css/1.fe7561c0.chunk.css.map",
   "static/css/main.b6558511.chunk.css.map": "/landing-page/static/css/main.b6558511.chunk.css.map",
+  "static/css/1.fe7561c0.chunk.css.map": "/landing-page/static/css/1.fe7561c0.chunk.css.map",
   "index.html": "/landing-page/index.html",
-  "precache-manifest.3dc3160389936afe7f2b07860184f8f3.js": "/landing-page/precache-manifest.3dc3160389936afe7f2b07860184f8f3.js",
+  "precache-manifest.b058f21392771a0d7287786b5f9b17e4.js": "/landing-page/precache-manifest.b058f21392771a0d7287786b5f9b17e4.js",
   "service-worker.js": "/landing-page/service-worker.js"
 }
