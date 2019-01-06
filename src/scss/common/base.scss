@@ -54,3 +54,10 @@ footer {
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  div.container {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+}

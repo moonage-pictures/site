@@ -26,7 +26,7 @@ class Navbar extends Component {
               this.state.navbarOpen ? " is-active" : ""
             }`}
             role="button"
-            href="#"
+            href="#menu"
             aria-label="menu"
             aria-expanded="false"
             onClick={this.toggleNavbar}

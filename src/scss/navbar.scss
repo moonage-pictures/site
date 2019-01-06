@@ -91,3 +91,70 @@ nav.navbar {
     color: black;
   }
 } 
+
+@media (max-width: 768px) {
+  a span {
+    color: white;
+  }
+
+  nav.navbar {
+    height: 5vh;
+  }
+  .navbar-menu.is-active {
+    background-color: black;
+  }
+  .navbar-burger {
+    color: white;
+  }
+  .navbar-end {
+    
+    .news-nav {
+      &:hover {
+        margin-top: 0;
+      }
+    }
+    .news-active {
+      margin-top: 0;
+    }
+    .company-nav {
+      &:hover {
+        margin-top: 0;
+      }
+    }
+    .company-active {
+      margin-top: 0;
+    }
+    .shows-nav {
+      &:hover {
+        margin-top: 0;
+      }
+    }
+    .shows-active {
+      margin-top: 0;
+    }
+    .people-nav {
+      &:hover {
+        margin-top: 0;
+      }
+    }
+    .people-active {
+      margin-top: 0;
+    }
+    .daydream-nav {
+      &:hover {
+        margin-top: 0;
+      }
+    }
+    .daydream-active {
+      margin-top: 0;
+    }
+    .contact-nav {
+      &:hover {
+        margin-top: 0;
+      }
+    }
+    .contact-active {
+      margin-top: 0;
+    }
+  } 
+}
