@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import ReactPlayer from "react-player";
+import ReactPlayer from 'react-player'
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
 import curfewLogo from "../assets/images/curfew/curfew-logo-red.jpg";
@@ -42,7 +42,7 @@ export default class Shows extends Component {
             </div>
             <div className="columns is-centered">
               <div className="column is-narrow is-half">
-                <ReactPlayer url="https://www.youtube.com/watch?v=hr3EBylHfIQ" />
+                <ReactPlayer url="https://www.youtube.com/watch?v=hr3EBylHfIQ&t=2s" width='100%'/>
               </div>
             </div>
            
