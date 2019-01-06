@@ -4,6 +4,7 @@ import Footer from './common/Footer'
 import logo from '../assets/images/logo.svg'
 
 export default class Home extends Component {
+  
   render() {
     return (
       <React.Fragment>

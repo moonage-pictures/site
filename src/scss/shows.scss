@@ -1,5 +1,12 @@
-.react-player {
-  display: flex;
-  justify-content: center;
-  background-color: red;
+@import './common/fonts.scss';
+
+button.gallery-button {
+  font-family: $heading-font;
+  border: none;
+  background: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  border-bottom: 1px solid white;
+  cursor: pointer;
 }

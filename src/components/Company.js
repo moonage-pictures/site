@@ -3,6 +3,9 @@ import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
 
 export default class Company extends Component {
+  
+  componentDidMount = () => window.scrollTo(0, 0);
+
   render() {
     return (
       <Fragment>
