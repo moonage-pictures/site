@@ -28,9 +28,9 @@ export default class Home extends Component {
           <div className="circle blue blank-six" />
           <div className="circle blue blank-seven" />
 
-            <div className="circle pink logo-pos">
+            {/* <div className="circle logo-pos"> */}
               <img className="home-logo" src={logo} alt="Moonage logo"/>
-            </div>
+            {/* </div> */}
 
           <Link to="/contact">
             <div className="circle green contact">
