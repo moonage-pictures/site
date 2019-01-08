@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "02065b1383406b11c9ec",
-    "url": "/landing-page/static/css/main.b6558511.chunk.css"
+    "revision": "7fb6ac1ce84c08c59d4a",
+    "url": "/landing-page/static/css/main.810522f9.chunk.css"
   },
   {
-    "revision": "02065b1383406b11c9ec",
-    "url": "/landing-page/static/js/main.02065b13.chunk.js"
+    "revision": "7fb6ac1ce84c08c59d4a",
+    "url": "/landing-page/static/js/main.7fb6ac1c.chunk.js"
   },
   {
     "revision": "136b1da993074905314c",
@@ -32,11 +32,11 @@ self.__precacheManifest = [
     "url": "/landing-page/static/media/curfew-logo-red.e695f269.jpg"
   },
   {
-    "revision": "e3d878cd140566af6511189f4c7effbd",
-    "url": "/landing-page/static/media/NeutraDisplay-Bold.e3d878cd.ttf"
+    "revision": "2645a132677b605635039e1e33d08bbc",
+    "url": "/landing-page/static/media/concrete-wall-3.2645a132.png"
   },
   {
-    "revision": "388a1666334694cc04362d9c450b48e0",
+    "revision": "cb580ac46283ace6b7f44c6de4af9502",
     "url": "/landing-page/index.html"
   }
 ];
