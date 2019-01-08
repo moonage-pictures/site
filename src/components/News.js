@@ -14,7 +14,7 @@ export default class News extends Component {
       <section className="section">
         <div className="columns is-centered">
           <div className="column is-two-thirds-desktop ">
-          <h1 className="section-header">News</h1>
+          <h1 className="title is-1 section-header">News</h1>
             <p className="body-font">
              Links to press releases
             </p>

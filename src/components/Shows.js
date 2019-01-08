@@ -20,7 +20,7 @@ export default class Shows extends Component {
           <section className="section">
             <div className="columns is-centered is-multiline">
               <div className="column is-two-thirds-desktop ">
-                <h1 className="section-header">Shows</h1>
+                <h1 className="title is-1 section-header">Shows</h1>
               </div>
             </div>
             <div className="columns is-centered is-multiline">

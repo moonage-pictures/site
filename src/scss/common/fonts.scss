@@ -1,8 +1,12 @@
-@font-face {
-  font-family:"Neutraface";
-  src: url('./assets/fonts/NeutraDisplay-Bold.ttf');
+$heading-font: "Roboto", sans-serif;
+$body-font: 'Helvetica', sans-serif;
+
+p.body-font {
+  margin-left: 0
 }
 
 
-$heading-font: "Neutraface", sans-serif;
-$body-font: 'Crimson Text', serif;
+h3.sub-title {
+  text-transform: capitalize;
+  font-size: 1.75rem;
+}

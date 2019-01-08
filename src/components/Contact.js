@@ -14,23 +14,20 @@ export default class Contact extends Component {
           <section className="section">
             <div className="columns is-centered">
               <div className="column is-two-thirds-desktop ">
-                <h1
-                  className="title is-1"
-                  style={{ marginTop: "2rem", borderBottom: "1px solid white" }}
-                >
-                  Contact
-                </h1>
+                <h1 className="title is-1 section-header">Contact</h1>
                 <div className="columns">
                   <div className="column is-one-third-desktop">
-                    <h2 className="title is-2">Address</h2>
+                    <h3 className="sub-title">Address</h3>
                     <p className="body-font">
+                      Moonage Pictures <br />
+                      3rd Floor <br />
                       181 Wardour St
-                      <br /> Soho
-                      <br /> London W1F 8WZ
+                      <br /> London <br />
+                      W1F 8WZ
                     </p>
                   </div>
                   <div className="column is-one-third-desktop">
-                    <h2 className="title is-2">Telephone</h2>
+                    <h3 className="sub-title">Telephone</h3>
                     <p className="body-font">
                       <a
                         href="tel:+4420 8127 5574"
@@ -44,7 +41,7 @@ export default class Contact extends Component {
                     </p>
                   </div>
                   <div className="column is-one-third-desktop">
-                    <h2 className="title is-2">Email</h2>
+                    <h3 className="sub-title">Email</h3>
                     <p className="body-font">
                       <a
                         href="mailto:office@moonagepictures.com"
@@ -58,6 +55,7 @@ export default class Contact extends Component {
                     </p>
                   </div>
                 </div>
+                <p className="body-font">We are sorry, at the moment we are unable to accept any unsolicited scripts and submissions.</p>
               </div>
             </div>
           </section>

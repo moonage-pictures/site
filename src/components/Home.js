@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Footer from './common/Footer'
-import logo from '../assets/images/logo.svg'
+import Footer from "./common/Footer";
+import logo from "../assets/images/logo.svg";
 
 export default class Home extends Component {
-  
   render() {
     return (
       <React.Fragment>
@@ -28,9 +27,7 @@ export default class Home extends Component {
           <div className="circle blue blank-six" />
           <div className="circle blue blank-seven" />
 
-            {/* <div className="circle logo-pos"> */}
-              <img className="home-logo" src={logo} alt="Moonage logo"/>
-            {/* </div> */}
+          <img className="home-logo" src={logo} alt="Moonage logo" />
 
           <Link to="/contact">
             <div className="circle green contact">
@@ -38,9 +35,9 @@ export default class Home extends Component {
             </div>
           </Link>
           <Link to="/daydream">
-          <div className="circle yellow daydream">
-          <h1 className="inner-circle">Daydream</h1>
-          </div>
+            <div className="circle yellow daydream">
+              <h1 className="inner-circle">Daydream</h1>
+            </div>
           </Link>
 
           <Link to="/people">
@@ -50,7 +47,7 @@ export default class Home extends Component {
           </Link>
 
           <Link to="/shows">
-            <div className="circle red shows">
+            <div className="circle pink shows">
               <h1 className="inner-circle">Shows</h1>
             </div>
           </Link>
