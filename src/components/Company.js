@@ -1,10 +1,22 @@
 import React, { Component, Fragment } from "react";
+import axios from 'axios'
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
 
 export default class Company extends Component {
   
-  componentDidMount = () => window.scrollTo(0, 0);
+  state = {
+    title: '',
+    body: ''
+  }
+  componentDidMount = async () => {
+    window.scrollTo(0, 0);
+    const { data } = await axios({
+      url: 'http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/2',
+      method: 'GET'
+    })
+    this.setState({ body: data.content.rendered, title: data.title.rendered })
+  };
 
   render() {
     return (
@@ -12,31 +24,11 @@ export default class Company extends Component {
         <Navbar />
         <div className="container">
           <section className="section">
-          
             <div className="columns is-centered">
-           
               <div className="column is-two-thirds-desktop ">
-              <h1 className="title is-1 section-header">Company</h1>
-                <p className="body-font">
-                  Moonage Pictures was founded in March 2018 by former BBC Drama
-                  Commissioner Matthew Read, Will Gould (Co-MD Tiger Aspect) and
-                  Frith Tiplady (Co-MD Tiger Aspect Drama). Together they are
-                  award-winning programme-makers, each with a proven track
-                  record in delivering distinctive, returnable series to both
-                  domestic and international audiences. They offer a combination
-                  of editorial and production skills, as well as fully
-                  understanding the needs of both programme sellers and buyers.
-                  They have produced, between them, dramas including{" "}
-                  <em>Peaky Blinders</em>, <em>Ripper Street</em>,{" "}
-                  <em>Fortitude</em>,<em>Marvellous</em> and{" "}
-                  <em>The Good Karma Hospital</em>.{" "}
-                </p>
-                <p className="body-font">
-                  At Moonage Pictures they are focused on creating, original,
-                  unconventional, inventive programming. Their first production
-                  is <em>Curfew</em>, an eight-part series created and written
-                  by Matthew that will be launching on Sky One in February 2019.
-                </p>
+                <h1 className="title is-1 section-header">{this.state.title}</h1>
+                <div className="page-content" dangerouslySetInnerHTML={{__html: this.state.body}}>
+                </div>
               </div>
             </div>
           </section>

@@ -1,10 +1,15 @@
 $heading-font: "Roboto", sans-serif;
-$body-font: 'Helvetica', sans-serif;
+$body-font: "Helvetica", sans-serif;
 
-p.body-font {
-  margin-left: 0
+.page-content {
+  p {
+    margin-left: 0;
+  }
+  a {
+    color: white;
+    text-decoration: underline;
+  }
 }
-
 
 h3.sub-title {
   text-transform: capitalize;
