@@ -9,7 +9,8 @@ import {Loader} from "./common/Loader";
 export default class News extends Component {
   state = {
     title: "",
-    pressReleases: []
+    pressReleases: [],
+    loading: true
   };
   componentDidMount = async () => {
     window.scrollTo(0, 0);
@@ -24,7 +25,7 @@ export default class News extends Component {
     } = await axios.get(
       "http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/486"
     );
-    this.setState({ pressReleases, title });
+    this.setState({ pressReleases, title, loading: false });
   };
 
   render() {

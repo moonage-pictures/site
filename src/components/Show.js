@@ -50,7 +50,7 @@ export default class Show extends Component {
                 .slice(1)
                 .map((img, i) => (
                   <div className="column is-one-third" key={i}>
-                    <p className="image is-3by2">
+                    <p className="image is-5by3">
                       <img src={img} alt="" />
                     </p>
                   </div>

@@ -31,7 +31,7 @@ export default class Contact extends Component {
 
         <div className="container fade">
           <section className="section">
-          {this.state.loading && <Loader />}
+          {this.state.loading ? <Loader /> :
             <div className="columns is-centered">
               <div className="column is-two-thirds-desktop ">
                 <h1 className="title is-1 section-header">
@@ -84,7 +84,7 @@ export default class Contact extends Component {
                   dangerouslySetInnerHTML={{ __html: this.state.body }}
                 />
               </div>
-            </div>
+            </div>}
           </section>
         </div>
         <Footer />

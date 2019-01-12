@@ -21,72 +21,84 @@ nav.navbar {
   .news-nav {
     &:hover {
       background-color: $blue;
+      background-image: $texture;
       margin-top: 10vh;
       color: black;
     }
   }
   .news-active {
     background-color: $blue;
+    background-image: $texture;
     margin-top: 10vh;
     color: black;
   }
   .company-nav {
     &:hover {
       background-color: $red;
+      background-image: $texture;
       margin-top: 10vh;
       color: black;
     }
   }
   .company-active {
     background-color: $red;
+    background-image: $texture;
     margin-top: 10vh;
     color: black;
   }
   .shows-nav {
     &:hover {
-      background-color: $red;
+      background-color: $pink;
+      background-image: $texture;
       margin-top: 10vh;
       color: black;
     }
   }
   .shows-active {
-    background-color: $red;
+    background-color: $pink;
+    background-image: $texture;
     margin-top: 10vh;
     color: black;
   }
   .people-nav {
     &:hover {
       background-color: $white;
+      background-image: $texture;
       margin-top: 10vh;
       color: black;
     }
   }
   .people-active {
     background-color: $white;
+    background-image: $texture;
     margin-top: 10vh;
     color: black;
   }
   .daydream-nav {
     &:hover {
       background-color: $yellow;
+      background-image: $texture;
       margin-top: 10vh;
       color: black;
     }
   }
   .daydream-active {
     background-color: $yellow;
+    background-image: $texture;
     margin-top: 10vh;
     color: black;
   }
   .contact-nav {
     &:hover {
       background-color: $green;
+      background-image: $texture;
       margin-top: 10vh;
       color: black;
     }
   }
   .contact-active {
     background-color: $green;
+    background-image: $texture;
     margin-top: 10vh;
     color: black;
   }
