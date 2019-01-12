@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "f42f19e5a5ff62f7f1bb",
-    "url": "/landing-page/static/css/main.b5d75b02.chunk.css"
+    "revision": "df0209a458775d6d31b9",
+    "url": "/landing-page/static/css/main.8467d9f6.chunk.css"
   },
   {
-    "revision": "f42f19e5a5ff62f7f1bb",
-    "url": "/landing-page/static/js/main.f42f19e5.chunk.js"
+    "revision": "df0209a458775d6d31b9",
+    "url": "/landing-page/static/js/main.df0209a4.chunk.js"
   },
   {
-    "revision": "9a988a231be1204e5919",
-    "url": "/landing-page/static/css/1.755a00eb.chunk.css"
+    "revision": "4b2a1c5a93349568b237",
+    "url": "/landing-page/static/css/1.55a0ee14.chunk.css"
   },
   {
-    "revision": "9a988a231be1204e5919",
-    "url": "/landing-page/static/js/1.9a988a23.chunk.js"
+    "revision": "4b2a1c5a93349568b237",
+    "url": "/landing-page/static/js/1.4b2a1c5a.chunk.js"
   },
   {
     "revision": "5e502b1b7d9d8dee4025",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/landing-page/static/media/concrete-wall-3.2645a132.png"
   },
   {
-    "revision": "30cf2a13a213ae8b70d35182d824d73c",
+    "revision": "72a20b79c295b47a4675db25536d992a",
     "url": "/landing-page/index.html"
   }
 ];
