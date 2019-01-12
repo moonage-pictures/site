@@ -61,7 +61,7 @@ class Navbar extends Component {
             <Link
               to="/shows"
               className={`navbar-item shows-nav ${
-                this.props.location.pathname === "/shows" ? "shows-active" : ""
+                this.props.location.pathname === "/shows" || this.props.location.pathname.includes('/shows/') ? "shows-active" : ""
               }`}
             >
               Shows
@@ -99,7 +99,7 @@ class Navbar extends Component {
             <Link to="/">
               <img
                 src={logo}
-                className="navbar-logo navbar-item"
+                className="navbar-logo"
                 alt="Moonage Pictures Logo"
               />
             </Link>

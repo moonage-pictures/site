@@ -6,6 +6,7 @@ nav.navbar {
   height: 18vh;
   margin: 0 auto;
   border-bottom: 1px solid white;
+  
 }
 
 .navbar-end {
@@ -16,7 +17,7 @@ nav.navbar {
     display: flex;
     align-items: flex-end;
     font-size: 1.75rem;
-  
+    margin-top: 10vh;
   }
   .news-nav {
     &:hover {
@@ -119,7 +120,9 @@ nav.navbar {
     color: white;
   }
   .navbar-end {
-    
+    .navbar-item {
+      margin-top: 0;
+    }
     .news-nav {
       &:hover {
         margin-top: 0;

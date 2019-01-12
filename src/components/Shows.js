@@ -36,7 +36,7 @@ export default class Shows extends Component {
           <section className="section">
           {this.state.loading && <Loader />}
             <div className="columns is-centered is-multiline">
-              <div className="column is-two-thirds-desktop ">
+              <div className="column is-full-width">
                 <h1 className="title is-1 section-header">
                   {this.state.title}
                 </h1>
