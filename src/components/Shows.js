@@ -19,7 +19,6 @@ export default class Shows extends Component {
       method: "GET"
     });
 
-    console.log('shows: ', shows)
     const {
       data: {
         title: { rendered: title }
