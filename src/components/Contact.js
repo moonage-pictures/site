@@ -2,12 +2,14 @@ import React, { Component, Fragment } from "react";
 import axios from "axios";
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
+import {Loader} from "./common/Loader";
 
 export default class Contact extends Component {
   state = {
     title: "",
     body: "",
-    contactInfo: {}
+    contactInfo: {},
+    loading: true
   };
   componentDidMount = async () => {
     window.scrollTo(0, 0);
@@ -17,7 +19,8 @@ export default class Contact extends Component {
     this.setState({
       title: data.title.rendered,
       contactInfo: { ...data.acf },
-      body: data.content.rendered
+      body: data.content.rendered,
+      loading: false
     });
   };
 
@@ -26,8 +29,9 @@ export default class Contact extends Component {
       <Fragment>
         <Navbar />
 
-        <div className="container">
+        <div className="container fade">
           <section className="section">
+          {this.state.loading && <Loader />}
             <div className="columns is-centered">
               <div className="column is-two-thirds-desktop ">
                 <h1 className="title is-1 section-header">

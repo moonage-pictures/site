@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
+import { Loader } from './common/Loader'
 
 export default class Shows extends Component {
   state = {
-    shows: []
+    shows: [],
+    title: "",
+    loading: true
   };
 
   componentDidMount = async () => {
@@ -22,15 +25,16 @@ export default class Shows extends Component {
     } = await axios.get(
       "http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/162"
     );
-    this.setState({ shows, title });
+    this.setState({ shows, title, loading: false });
   };
 
   render() {
     return (
       <Fragment>
         <Navbar />
-        <div className="container">
+        <div className="container fade">
           <section className="section">
+          {this.state.loading && <Loader />}
             <div className="columns is-centered is-multiline">
               <div className="column is-two-thirds-desktop ">
                 <h1 className="title is-1 section-header">

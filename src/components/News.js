@@ -4,6 +4,7 @@ import moment from "moment";
 
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
+import {Loader} from "./common/Loader";
 
 export default class News extends Component {
   state = {
@@ -30,8 +31,9 @@ export default class News extends Component {
     return (
       <Fragment>
         <Navbar />
-        <div className="container">
+        <div className="container fade">
           <section className="section">
+          {this.state.loading && <Loader />}
             <div className="columns is-centered">
               <div className="column is-two-thirds-desktop ">
                 <h1 className="title is-1 section-header">
