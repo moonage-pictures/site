@@ -15,7 +15,9 @@ export default class Show extends Component {
   getGalleryLinks = galleryInfo =>
     galleryInfo
       .split("src=")
-      .map(imgLink => imgLink.substring(1, imgLink.indexOf(imgLink.match(/jpg|jpeg|png/))))
+      .map(imgLink =>
+        imgLink.substring(1, imgLink.indexOf(imgLink.match(/jpg|jpeg|png/)))
+      );
 
   successState = () => this.setState({ playerLoaded: true });
 
@@ -45,6 +47,7 @@ export default class Show extends Component {
                     width="100%"
                     height="60vh"
                     onReady={this.successState}
+                    controls
                   />
                 </div>
               </div>
