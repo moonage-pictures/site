@@ -43,7 +43,7 @@ export default class Show extends Component {
                 {!this.state.playerLoaded && <Loader section="trailer" />}{" "}
                 <div className="fade">
                   <ReactPlayer
-                    url={this.state.show.acf["trailer-url"]}
+                    url={this.state.show.acf.trailerUrl}
                     width="100%"
                     height="60vh"
                     onReady={this.successState}
@@ -53,7 +53,7 @@ export default class Show extends Component {
               </div>
             </div>
             <div className="columns is-multiline is-centered">
-              {this.getGalleryLinks(this.state.show.acf["landscape-gallery"])
+              {this.getGalleryLinks(this.state.show.acf.landscapeGallery)
                 .slice(1)
                 .map((img, i) => (
                   <div className="column is-one-third" key={i}>

@@ -18,6 +18,8 @@ export default class Shows extends Component {
       url: "http://3jd.d66.myftpupload.com/wp-json/wp/v2/posts?categories=4",
       method: "GET"
     });
+
+    console.log('shows: ', shows)
     const {
       data: {
         title: { rendered: title }
@@ -54,8 +56,8 @@ export default class Shows extends Component {
                     <figure className="image is-16by9 show-thumbnail">
                       <img
                         className=""
-                        src={show.acf["title-banner"].url}
-                        alt={show.acf["title-banner"].alt}
+                        src={show.acf.bannerImage.url}
+                        alt={show.acf.bannerImage.alt}
                       />
                     </figure>
                     <h4
