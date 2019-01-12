@@ -1,7 +1,7 @@
 {
-  "main.css": "/landing-page/static/css/main.deaeecc1.chunk.css",
-  "main.js": "/landing-page/static/js/main.8b8901dc.chunk.js",
-  "main.js.map": "/landing-page/static/js/main.8b8901dc.chunk.js.map",
+  "main.css": "/landing-page/static/css/main.b5d75b02.chunk.css",
+  "main.js": "/landing-page/static/js/main.f42f19e5.chunk.js",
+  "main.js.map": "/landing-page/static/js/main.f42f19e5.chunk.js.map",
   "static/css/1.755a00eb.chunk.css": "/landing-page/static/css/1.755a00eb.chunk.css",
   "static/js/1.9a988a23.chunk.js": "/landing-page/static/js/1.9a988a23.chunk.js",
   "static/js/1.9a988a23.chunk.js.map": "/landing-page/static/js/1.9a988a23.chunk.js.map",
@@ -9,9 +9,9 @@
   "runtime~main.js.map": "/landing-page/static/js/runtime~main.5e502b1b.js.map",
   "static/media/logo.svg": "/landing-page/static/media/logo.a6bcd0cf.svg",
   "static/media/index.scss": "/landing-page/static/media/concrete-wall-3.2645a132.png",
-  "static/css/main.deaeecc1.chunk.css.map": "/landing-page/static/css/main.deaeecc1.chunk.css.map",
+  "static/css/main.b5d75b02.chunk.css.map": "/landing-page/static/css/main.b5d75b02.chunk.css.map",
   "static/css/1.755a00eb.chunk.css.map": "/landing-page/static/css/1.755a00eb.chunk.css.map",
   "index.html": "/landing-page/index.html",
-  "precache-manifest.3f9cadbebcffc3b023105abd2c1b619c.js": "/landing-page/precache-manifest.3f9cadbebcffc3b023105abd2c1b619c.js",
+  "precache-manifest.bcae4f1f205ba18d8acbfde541ed8d92.js": "/landing-page/precache-manifest.bcae4f1f205ba18d8acbfde541ed8d92.js",
   "service-worker.js": "/landing-page/service-worker.js"
 }
