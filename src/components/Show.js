@@ -7,7 +7,8 @@ import { Loader } from "./common/Loader";
 export default class Show extends Component {
   state = {
     show: this.props.location.state.show,
-    playerLoaded: false
+    playerLoaded: false,
+    imageModalActive: {}
   };
 
   componentDidMount = () => window.scrollTo(0, 0);
@@ -56,11 +57,50 @@ export default class Show extends Component {
               {this.getGalleryLinks(this.state.show.acf.landscapeGallery)
                 .slice(1)
                 .map((img, i) => (
-                  <div className="column is-one-third" key={i}>
-                    <p className="image is-5by3">
-                      <img src={img} alt="" />
-                    </p>
-                  </div>
+                  <Fragment key={i}>
+                    <div className="column is-one-third">
+                      <p
+                        className="image is-5by3"
+                        onClick={() =>
+                          this.setState({
+                            imageModalActive: Object.assign(
+                              this.state.imageModalActive,
+                              { [img]: true }
+                            )
+                          })
+                        }
+                      >
+                        <img src={img} alt="" />
+                      </p>
+                    </div>
+                    <div
+                      className={`modal ${
+                        this.state.imageModalActive[img] ? "is-active" : ""
+                      }`}
+                    >
+                      <div className="modal-background" onClick={() =>
+                          this.setState({
+                            imageModalActive: Object.assign(
+                              this.state.imageModalActive,
+                              { [img]: false }
+                            )
+                          })
+                        } />
+                      <div className="modal-content">
+                        <p className="image is-5by3">
+                          <img src={img} alt="" />
+                        </p>
+                      </div>
+                      <button className="modal-close is-large" aria-label="close" onClick={() =>
+                          this.setState({
+                            imageModalActive: Object.assign(
+                              this.state.imageModalActive,
+                              { [img]: false }
+                            )
+                          })
+                        }/>
+                    </div>
+                  </Fragment>
                 ))}
             </div>
           </section>
