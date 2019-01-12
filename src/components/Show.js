@@ -11,11 +11,11 @@ export default class Show extends Component {
   };
 
   componentDidMount = () => window.scrollTo(0, 0);
-  
+
   getGalleryLinks = galleryInfo =>
     galleryInfo
       .split("src=")
-      .map(imgLink => imgLink.substring(1, imgLink.indexOf(".jpg")));
+      .map(imgLink => imgLink.substring(1, imgLink.indexOf(imgLink.match(/jpg|jpeg|png/))))
 
   successState = () => this.setState({ playerLoaded: true });
 
@@ -39,12 +39,14 @@ export default class Show extends Component {
             <div className="columns is-centered">
               <div className="column is-full-width">
                 {!this.state.playerLoaded && <Loader section="trailer" />}{" "}
-                <div className="fade"><ReactPlayer
-                  url={this.state.show.acf["trailer-url"]}
-                  width="100%"
-                  height="60vh"
-                  onReady={this.successState}
-                /></div>
+                <div className="fade">
+                  <ReactPlayer
+                    url={this.state.show.acf["trailer-url"]}
+                    width="100%"
+                    height="60vh"
+                    onReady={this.successState}
+                  />
+                </div>
               </div>
             </div>
             <div className="columns is-multiline is-centered">
