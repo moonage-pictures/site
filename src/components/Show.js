@@ -10,6 +10,8 @@ export default class Show extends Component {
     playerLoaded: false
   };
 
+  componentDidMount = () => window.scrollTo(0, 0);
+  
   getGalleryLinks = galleryInfo =>
     galleryInfo
       .split("src=")
