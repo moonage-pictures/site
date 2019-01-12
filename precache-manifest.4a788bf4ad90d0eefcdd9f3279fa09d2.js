@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "4f5a145ad20126539263",
+    "revision": "a49492533c85f34e13f1",
     "url": "/landing-page/static/css/main.d52f75e5.chunk.css"
   },
   {
-    "revision": "4f5a145ad20126539263",
-    "url": "/landing-page/static/js/main.4f5a145a.chunk.js"
+    "revision": "a49492533c85f34e13f1",
+    "url": "/landing-page/static/js/main.a4949253.chunk.js"
   },
   {
     "revision": "9a988a231be1204e5919",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/landing-page/static/media/concrete-wall-3.2645a132.png"
   },
   {
-    "revision": "4c701f91ce9147c217be7489e2d24cb2",
+    "revision": "3d96c5f604302b76156283c93032052f",
     "url": "/landing-page/index.html"
   }
 ];
