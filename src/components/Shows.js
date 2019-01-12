@@ -1,13 +1,11 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
-import ReactPlayer from "react-player";
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
 
 export default class Shows extends Component {
   state = {
-    galleryModalActive: {},
-    landscapeImages: [],
     shows: []
   };
 
@@ -24,14 +22,8 @@ export default class Shows extends Component {
     } = await axios.get(
       "http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/162"
     );
-
     this.setState({ shows, title });
   };
-
-  getGalleryLinks = galleryInfo =>
-    galleryInfo
-      .split("src=")
-      .map(imgLink => imgLink.substring(1, imgLink.indexOf(".jpg")));
 
   render() {
     return (
@@ -46,91 +38,37 @@ export default class Shows extends Component {
                 </h1>
               </div>
             </div>
-            {this.state.shows.map(show => (
-              <Fragment key={show.id}>
-                <div className="columns is-centered is-multiline">
-                  <div className="column is-one-third">
-                    <figure className="image is-16by9">
+            <div className="columns is-centered is-multiline">
+              {this.state.shows.map(show => (
+                <div className="column is-one-third" key={show.id}>
+                  <Link
+                    to={{
+                      pathname: `shows/${show.title.rendered.toLowerCase()}`,
+                      state: { show }
+                    }}
+                  >
+                    <figure className="image is-16by9 show-thumbnail">
                       <img
+                        className=""
                         src={show.acf["title-banner"].url}
                         alt={show.acf["title-banner"].alt}
                       />
                     </figure>
-                  </div>
-                </div>
-                <div className="columns is-centered">
-                  <div className="column has-text-centered is-narrow is-two-thirds">
-                    <button
-                      className="gallery-button"
-                      onClick={() =>
-                        this.setState({
-                          galleryModalActive: Object.assign(
-                            this.state.galleryModalActive,
-                            {
-                              [show.id]: true
-                            }
-                          )
-                        })
-                      }
+                    <h4
+                      className="subtitle is-4 sub-title"
+                      style={{
+                        color: "white",
+                        textAlign: "center",
+                        cursor: "pointer"
+                      }}
                     >
-                      Gallery
-                    </button>
-                  </div>
+                      {show.title.rendered}
+                    </h4>
+                  </Link>
                 </div>
-                <div className="columns is-centered">
-                  <div className="column is-narrow is-half">
-                    <ReactPlayer url={show.acf["trailer-url"]} width="100%" />
-                  </div>
-                </div>
+              ))}
+            </div>
 
-                <div
-                  className={`modal ${
-                    this.state.galleryModalActive[show.id] ? "is-active" : ""
-                  }`}
-                >
-                  <div
-                    className="modal-background"
-                    onClick={() =>
-                      this.setState({
-                        galleryModalActive: Object.assign(
-                          this.state.galleryModalActive,
-                          {
-                            [show.id]: false
-                          }
-                        )
-                      })
-                    }
-                  />
-                  <div className="modal-content">
-                    <div className="columns">
-                      {this.getGalleryLinks(show.acf["landscape-gallery"])
-                        .slice(1)
-                        .map((img, i) => (
-                          <div className="column is-one-third" key={i}>
-                            <p className="image is-3by2">
-                              <img src={img} alt="" />
-                            </p>
-                          </div>
-                        ))}
-                    </div>
-                  </div>
-                  <button
-                    className="modal-close is-large"
-                    aria-label="close"
-                    onClick={() =>
-                      this.setState({
-                        galleryModalActive: Object.assign(
-                          this.state.galleryModalActive,
-                          {
-                            [show.id]: false
-                          }
-                        )
-                      })
-                    }
-                  />
-                </div>
-              </Fragment>
-            ))}
           </section>
         </div>
         <Footer />

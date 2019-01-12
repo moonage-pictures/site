@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
-import moment from 'moment'
+import moment from "moment";
 
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
@@ -39,16 +39,29 @@ export default class News extends Component {
                 </h1>
                 {this.state.pressReleases.map(pressRelease => (
                   <Fragment key={pressRelease.id}>
-                    <h3 className="sub-title">
-                      {pressRelease.title.rendered}
-                    </h3>
+                    <h3 className="sub-title">{pressRelease.title.rendered}</h3>
                     <div
                       className="page-content"
                       dangerouslySetInnerHTML={{
                         __html: pressRelease.content.rendered
                       }}
                     />
-                    <div className="page-content"><p><small><em>Published on: <span dangerouslySetInnerHTML={{__html: moment(pressRelease.date).format('MMMM Do YYYY, h:mm a')}} /></em></small></p></div>
+                    <div className="page-content">
+                      <p>
+                        <small>
+                          <em>
+                            Published on:{" "}
+                            <span
+                              dangerouslySetInnerHTML={{
+                                __html: moment(pressRelease.date).format(
+                                  "MMMM Do YYYY, h:mm a"
+                                )
+                              }}
+                            />
+                          </em>
+                        </small>
+                      </p>
+                    </div>
                     <hr />
                   </Fragment>
                 ))}

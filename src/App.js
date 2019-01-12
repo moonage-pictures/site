@@ -4,6 +4,7 @@ import "bulma/css/bulma.css";
 import Home from "./components/Home";
 import News from "./components/News";
 import Shows from "./components/Shows";
+import Show from "./components/Show";
 import Company from "./components/Company";
 import People from "./components/People";
 import Daydream from "./components/Daydream";
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/company" component={Company} />
           <Route path="/news" component={News} />
+          <Route path="/shows/:id" component={Show} />
           <Route path="/shows" component={Shows} />
           <Route path="/people" component={People} />
           <Route path="/daydream" component={Daydream} />

@@ -10,3 +10,11 @@ button.gallery-button {
   border-bottom: 1px solid white;
   cursor: pointer;
 }
+
+
+.show-thumbnail {
+  &:hover {
+    opacity: .5;
+  }
+  cursor: pointer;
+}
