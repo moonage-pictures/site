@@ -1,12 +1,11 @@
-@import './common/fonts.scss';
-@import './common/colors.scss';
+@import "./common/fonts.scss";
+@import "./common/colors.scss";
 
 nav.navbar {
   background-color: black;
   height: 18vh;
   margin: 0 auto;
   border-bottom: 1px solid white;
-  
 }
 
 .navbar-end {
@@ -103,15 +102,21 @@ nav.navbar {
     margin-top: 10vh;
     color: black;
   }
-} 
+}
 
 @media (max-width: 768px) {
+  nav.navbar {
+    height: 5vh;
+  }
+}
+
+@media (max-width: 1088px) {
   a span {
     color: white;
   }
 
   nav.navbar {
-    height: 5vh;
+    height: 15vh;
   }
   .navbar-menu.is-active {
     background-color: black;
@@ -171,5 +176,5 @@ nav.navbar {
     .contact-active {
       margin-top: 0;
     }
-  } 
+  }
 }
