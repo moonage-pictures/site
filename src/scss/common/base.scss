@@ -62,7 +62,7 @@ footer {
 
   .footer-content {
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -73,5 +73,9 @@ footer {
     margin-top: 5vh;
     margin-bottom: 10vh;
   }
+
+  // footer {
+  //   position: relative;
+  // }
 
 }

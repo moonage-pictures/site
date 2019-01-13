@@ -60,7 +60,8 @@ export default class Show extends Component {
                   <Fragment key={i}>
                     <div className="column is-one-third">
                       <p
-                        className="image is-5by3"
+                        className="image is-16by9"
+                        style={{cursor: "pointer"}}
                         onClick={() =>
                           this.setState({
                             imageModalActive: Object.assign(
@@ -87,7 +88,7 @@ export default class Show extends Component {
                           })
                         } />
                       <div className="modal-content">
-                        <p className="image is-5by3">
+                        <p className="image">
                           <img src={img} alt="" />
                         </p>
                       </div>
