@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
-import Navbar from "./common/Navbar";
-import Footer from "./common/Footer";
+import Navbar from "../common/Navbar";
+import Footer from "../common/Footer";
 import ReactPlayer from "react-player";
-import { Loader } from "./common/Loader";
+import { Loader } from "../common/Loader";
 
 export default class Show extends Component {
   state = {
@@ -17,12 +17,14 @@ export default class Show extends Component {
     galleryInfo
       .split("src=")
       .map(imgLink =>
-        imgLink.substring(1, imgLink.indexOf(imgLink.match(/jpg|jpeg|png/)))
+        imgLink.substring(1, imgLink.indexOf(imgLink.match(/.jpg|.jpeg|.png/)))
       );
 
   successState = () => this.setState({ playerLoaded: true });
 
   render() {
+    const { show, playerLoaded, imageModalActive } = this.state;
+    console.log('show is: ', show)
     return (
       <Fragment>
         <Navbar />
@@ -34,17 +36,17 @@ export default class Show extends Component {
                   className="title is-1 section-header"
                   style={{ textAlign: "center" }}
                 >
-                  {this.state.show.title.rendered}
+                  {show.title.rendered}
                 </h1>
               </div>
             </div>
 
             <div className="columns is-centered">
               <div className="column is-full-width">
-                {!this.state.playerLoaded && <Loader section="trailer" />}{" "}
+                {!playerLoaded && <Loader section="trailer" />}{" "}
                 <div className="fade">
                   <ReactPlayer
-                    url={this.state.show.acf.trailerUrl}
+                    url={show.acf.trailerUrl}
                     width="100%"
                     height="60vh"
                     onReady={this.successState}
@@ -54,52 +56,59 @@ export default class Show extends Component {
               </div>
             </div>
             <div className="columns is-multiline is-centered">
-              {this.getGalleryLinks(this.state.show.acf.landscapeGallery)
+              {this.getGalleryLinks(show.acf.landscapeGallery)
                 .slice(1)
                 .map((img, i) => (
                   <Fragment key={i}>
                     <div className="column is-one-third">
                       <p
                         className="image is-16by9"
-                        style={{cursor: "pointer"}}
+                        style={{ cursor: "pointer" }}
                         onClick={() =>
                           this.setState({
-                            imageModalActive: Object.assign(
-                              this.state.imageModalActive,
-                              { [img]: true }
-                            )
+                            imageModalActive: {
+                              ...imageModalActive,
+                              [img]: true
+                            }
                           })
                         }
                       >
-                        <img src={img} alt="" />
+                        <img src={img} alt={`${show.title.rendered} screenshot ${i + 1}`} />
                       </p>
                     </div>
                     <div
                       className={`modal ${
-                        this.state.imageModalActive[img] ? "is-active" : ""
+                        imageModalActive[img] ? "is-active" : ""
                       }`}
                     >
-                      <div className="modal-background" onClick={() =>
+                      <div
+                        className="modal-background"
+                        onClick={() =>
                           this.setState({
-                            imageModalActive: Object.assign(
-                              this.state.imageModalActive,
-                              { [img]: false }
-                            )
+                            imageModalActive: {
+                              ...imageModalActive,
+                              [img]: false
+                            }
                           })
-                        } />
+                        }
+                      />
                       <div className="modal-content">
                         <p className="image">
                           <img src={img} alt="" />
                         </p>
                       </div>
-                      <button className="modal-close is-large" aria-label="close" onClick={() =>
+                      <button
+                        className="modal-close is-large"
+                        aria-label="close"
+                        onClick={() =>
                           this.setState({
-                            imageModalActive: Object.assign(
-                              this.state.imageModalActive,
-                              { [img]: false }
-                            )
+                            imageModalActive: {
+                              ...imageModalActive,
+                              [img]: false
+                            }
                           })
-                        }/>
+                        }
+                      />
                     </div>
                   </Fragment>
                 ))}

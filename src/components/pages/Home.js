@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
-import Footer from "./common/Footer";
-import logo from "../assets/images/logo.svg";
+import Footer from "../common/Footer";
+import logo from "../../assets/images/logo.svg";
 
 export default class Home extends Component {
   render() {
     return (
-      <React.Fragment>
+      <Fragment>
         <div className="home-wrapper">
           <Link to="/company">
             <div className="circle red company">
@@ -53,7 +53,7 @@ export default class Home extends Component {
           </Link>
         </div>
         <Footer />
-      </React.Fragment>
+      </Fragment>
     );
   }
 }

@@ -2,9 +2,9 @@ import React, { Component, Fragment } from "react";
 import axios from "axios";
 import moment from "moment";
 
-import Navbar from "./common/Navbar";
-import Footer from "./common/Footer";
-import {Loader} from "./common/Loader";
+import Navbar from "../common/Navbar";
+import Footer from "../common/Footer";
+import { Loader } from "../common/Loader";
 
 export default class News extends Component {
   state = {
@@ -29,18 +29,17 @@ export default class News extends Component {
   };
 
   render() {
+    const { loading, title, pressReleases } = this.state;
     return (
       <Fragment>
         <Navbar />
         <div className="container fade">
           <section className="section">
-          {this.state.loading && <Loader />}
+            {loading && <Loader />}
             <div className="columns is-centered">
               <div className="column is-two-thirds-desktop ">
-                <h1 className="title is-1 section-header">
-                  {this.state.title}
-                </h1>
-                {this.state.pressReleases.map(pressRelease => (
+                <h1 className="title is-1 section-header">{title}</h1>
+                {pressReleases.map(pressRelease => (
                   <Fragment key={pressRelease.id}>
                     <h3 className="sub-title">{pressRelease.title.rendered}</h3>
                     <div
