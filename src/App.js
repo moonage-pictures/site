@@ -1,20 +1,19 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "bulma/css/bulma.css";
-import Home from "./components/Home";
-import News from "./components/News";
-import Shows from "./components/Shows";
-import Show from "./components/Show";
-import Company from "./components/Company";
-import People from "./components/People";
-import Daydream from "./components/Daydream";
-import Contact from "./components/Contact";
+import "bulma";
+import Home from "./components/pages/Home";
+import News from "./components/pages/News";
+import Shows from "./components/pages/Shows";
+import Show from "./components/pages/Show";
+import Company from "./components/pages/Company";
+import People from "./components/pages/People";
+import Daydream from "./components/pages/Daydream";
+import Contact from "./components/pages/Contact";
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Fragment>
+      <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/company" component={Company} />
@@ -25,10 +24,7 @@ class App extends Component {
           <Route path="/daydream" component={Daydream} />
           <Route path="/contact" component={Contact} />
         </Switch>
-        </Fragment>
       </BrowserRouter>
     );
   }
 }
-
-export default App;

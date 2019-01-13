@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Navbar from "./common/Navbar";
-import Footer from "./common/Footer";
-import { Loader } from './common/Loader'
+import Navbar from "../common/Navbar";
+import Footer from "../common/Footer";
+import { Loader } from "../common/Loader";
 
 export default class Shows extends Component {
   state = {
@@ -19,6 +19,14 @@ export default class Shows extends Component {
       method: "GET"
     });
 
+    shows.map(
+      show =>
+        (show.showLink = show.title.rendered
+          .toLowerCase()
+          .split(" ")
+          .join("-"))
+    );
+
     const {
       data: {
         title: { rendered: title }
@@ -30,25 +38,24 @@ export default class Shows extends Component {
   };
 
   render() {
+    const { loading, title, shows } = this.state;
     return (
       <Fragment>
         <Navbar />
         <div className="container fade">
           <section className="section">
-          {this.state.loading && <Loader />}
+            {loading && <Loader />}
             <div className="columns is-centered is-multiline">
               <div className="column is-full-width">
-                <h1 className="title is-1 section-header">
-                  {this.state.title}
-                </h1>
+                <h1 className="title is-1 section-header">{title}</h1>
               </div>
             </div>
             <div className="columns is-centered is-multiline">
-              {this.state.shows.map(show => (
+              {shows.map(show => (
                 <div className="column is-one-third" key={show.id}>
                   <Link
                     to={{
-                      pathname: `shows/${show.title.rendered.toLowerCase()}`,
+                      pathname: `shows/${show.showLink}`,
                       state: { show }
                     }}
                   >
@@ -73,7 +80,6 @@ export default class Shows extends Component {
                 </div>
               ))}
             </div>
-
           </section>
         </div>
         <Footer />
