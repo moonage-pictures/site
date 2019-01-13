@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -13,7 +12,7 @@ export default class Footer extends Component {
     return (
       <footer>
         <div className="footer-content">
-          <Link to="https://www.facebook.com/MoonagePics/">
+          <a href="https://www.facebook.com/MoonagePics/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={faFacebook}
               size={
@@ -27,8 +26,8 @@ export default class Footer extends Component {
               color="white"
               style={{ paddingRight: "2rem", marginLeft: "2rem" }}
             />
-          </Link>
-          <Link to="https://twitter.com/moonagepictures?lang=en">
+          </a>
+          <a href="https://twitter.com/moonagepictures?lang=en" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={faTwitter}
               size={
@@ -42,8 +41,8 @@ export default class Footer extends Component {
               color="white"
               style={{ paddingRight: "2rem" }}
             />
-          </Link>
-          <Link to="https://www.instagram.com/moonagepictures/">
+          </a>
+          <a href="https://www.instagram.com/moonagepictures/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={faInstagram}
               size={
@@ -57,7 +56,7 @@ export default class Footer extends Component {
               color="white"
               style={{ paddingRight: "2rem" }}
             />
-          </Link>
+          </a>
         </div>
       </footer>
     );
