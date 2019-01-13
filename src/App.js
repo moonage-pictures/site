@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bulma";
 import Home from "./components/pages/Home";
@@ -10,10 +10,11 @@ import People from "./components/pages/People";
 import Daydream from "./components/pages/Daydream";
 import Contact from "./components/pages/Contact";
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Fragment>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/company" component={Company} />
@@ -24,7 +25,10 @@ export default class App extends Component {
           <Route path="/daydream" component={Daydream} />
           <Route path="/contact" component={Contact} />
         </Switch>
+        </Fragment>
       </BrowserRouter>
     );
   }
 }
+
+export default App;
