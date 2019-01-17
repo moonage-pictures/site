@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "71eb64a2854dc04a18f7",
-    "url": "/landing-page/static/css/main.a8fc5864.chunk.css"
+    "revision": "486356c639e1114a6305",
+    "url": "/landing-page/static/css/main.98c960c6.chunk.css"
   },
   {
-    "revision": "71eb64a2854dc04a18f7",
-    "url": "/landing-page/static/js/main.71eb64a2.chunk.js"
+    "revision": "486356c639e1114a6305",
+    "url": "/landing-page/static/js/main.486356c6.chunk.js"
   },
   {
     "revision": "937a5897480b849747e6",
@@ -24,11 +24,11 @@ self.__precacheManifest = [
     "url": "/landing-page/static/media/logo.a6bcd0cf.svg"
   },
   {
-    "revision": "2645a132677b605635039e1e33d08bbc",
-    "url": "/landing-page/static/media/concrete-wall-3.2645a132.png"
+    "revision": "5b232307e361e7c518bddd3b0ddc776c",
+    "url": "/landing-page/static/media/lulo-clean-one-bold.5b232307.otf"
   },
   {
-    "revision": "453fa01aab08ec29c320ed9bd906f903",
+    "revision": "81d550edc67bc6631c2ef79760c00475",
     "url": "/landing-page/index.html"
   }
 ];
