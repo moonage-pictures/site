@@ -34,7 +34,7 @@ div.container {
   p {
     font-family: $body-font;
     color: white;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin: 1rem;
   }
 }
@@ -44,13 +44,30 @@ div.container {
   h2,
   h3 {
     font-family: $heading-font;
-    text-transform: uppercase;
-    font-size: 3rem;
     color: white;
   }
+
   .section-header {
+    letter-spacing: -0.3rem;
     margin-top: 2rem;
   }
+}
+
+.section h1.title.is-1 {
+  font-size: 2.25rem;
+}
+
+.section h2, .sub-title{
+  font-size: 1.75rem;
+}
+
+.section h3, .sub-title {
+  font-size: 1.5rem;
+  letter-spacing: -0.3rem;
+}
+
+.section h2.people-name {
+  font-size: 1.75rem;
 }
 
 footer {

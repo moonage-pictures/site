@@ -41,7 +41,7 @@ export default class News extends Component {
                 <h1 className="title is-1 section-header">{title}</h1>
                 {pressReleases.map(pressRelease => (
                   <Fragment key={pressRelease.id}>
-                    <h3 className="sub-title">{pressRelease.title.rendered}</h3>
+                    <h2 className="sub-title">{pressRelease.title.rendered}</h2>
                     <div
                       className="page-content"
                       dangerouslySetInnerHTML={{
