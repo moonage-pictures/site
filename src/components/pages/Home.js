@@ -20,12 +20,12 @@ export default class Home extends Component {
             </div>
           </Link>
 
-          <div className="circle yellow blank-one" />
-          <div className="circle green blank-two" />
+          <div className="circle blue blank-one" />
+          <div className="circle yellow blank-two" />
           <div className="circle white blank-three" />
-          <div className="circle pink blank-four" />
-          <div className="circle blue blank-six" />
-          <div className="circle blue blank-seven" />
+          <div className="circle red blank-four" />
+          <div className="circle pink blank-six" />
+          <div className="circle yellow blank-seven" />
 
           <img className="home-logo" src={logo} alt="Moonage logo" />
 
@@ -36,7 +36,7 @@ export default class Home extends Component {
           </Link>
           <Link to="/daydream">
             <div className="circle yellow daydream">
-              <h1 className="inner-circle">Daydream</h1>
+              <h1 className="inner-circle">Dream</h1>
             </div>
           </Link>
 

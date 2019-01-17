@@ -1,4 +1,4 @@
-$heading-font: "Titillium Web", sans-serif;
+$heading-font: "Lulo Bold", sans-serif;
 $body-font: "Helvetica", sans-serif;
 
 .page-content {
@@ -31,4 +31,10 @@ $body-font: "Helvetica", sans-serif;
 h3.sub-title {
   text-transform: capitalize;
   font-size: 1.75rem;
+  letter-spacing: -0.4rem;
+}
+
+@font-face {
+  font-family:"Lulo Bold";
+  src: url('../assets/fonts/lulo-clean-family/lulo-clean-one-bold.otf');
 }
