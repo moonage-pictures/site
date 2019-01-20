@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "486356c639e1114a6305",
-    "url": "/landing-page/static/css/main.98c960c6.chunk.css"
+    "revision": "e5b9978f4fce3d35d95b",
+    "url": "/landing-page/static/css/main.5c471720.chunk.css"
   },
   {
-    "revision": "486356c639e1114a6305",
-    "url": "/landing-page/static/js/main.486356c6.chunk.js"
+    "revision": "e5b9978f4fce3d35d95b",
+    "url": "/landing-page/static/js/main.e5b9978f.chunk.js"
   },
   {
     "revision": "937a5897480b849747e6",
@@ -24,11 +24,11 @@ self.__precacheManifest = [
     "url": "/landing-page/static/media/logo.a6bcd0cf.svg"
   },
   {
-    "revision": "5b232307e361e7c518bddd3b0ddc776c",
-    "url": "/landing-page/static/media/lulo-clean-one-bold.5b232307.otf"
+    "revision": "bda4e77ee6216cabd09be3d8948daa61",
+    "url": "/landing-page/static/media/lulo-clean-one.bda4e77e.otf"
   },
   {
-    "revision": "81d550edc67bc6631c2ef79760c00475",
+    "revision": "cfede7164e2b335904402581d0a276ba",
     "url": "/landing-page/index.html"
   }
 ];

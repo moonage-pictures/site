@@ -1,17 +1,17 @@
 {
-  "main.css": "/landing-page/static/css/main.98c960c6.chunk.css",
-  "main.js": "/landing-page/static/js/main.486356c6.chunk.js",
-  "main.js.map": "/landing-page/static/js/main.486356c6.chunk.js.map",
+  "main.css": "/landing-page/static/css/main.5c471720.chunk.css",
+  "main.js": "/landing-page/static/js/main.e5b9978f.chunk.js",
+  "main.js.map": "/landing-page/static/js/main.e5b9978f.chunk.js.map",
   "static/css/1.f6ca1596.chunk.css": "/landing-page/static/css/1.f6ca1596.chunk.css",
   "static/js/1.937a5897.chunk.js": "/landing-page/static/js/1.937a5897.chunk.js",
   "static/js/1.937a5897.chunk.js.map": "/landing-page/static/js/1.937a5897.chunk.js.map",
   "runtime~main.js": "/landing-page/static/js/runtime~main.5e502b1b.js",
   "runtime~main.js.map": "/landing-page/static/js/runtime~main.5e502b1b.js.map",
   "static/media/logo.svg": "/landing-page/static/media/logo.a6bcd0cf.svg",
-  "static/media/index.scss": "/landing-page/static/media/lulo-clean-one-bold.5b232307.otf",
-  "static/css/main.98c960c6.chunk.css.map": "/landing-page/static/css/main.98c960c6.chunk.css.map",
+  "static/media/index.scss": "/landing-page/static/media/lulo-clean-one.bda4e77e.otf",
   "static/css/1.f6ca1596.chunk.css.map": "/landing-page/static/css/1.f6ca1596.chunk.css.map",
+  "static/css/main.5c471720.chunk.css.map": "/landing-page/static/css/main.5c471720.chunk.css.map",
   "index.html": "/landing-page/index.html",
-  "precache-manifest.cd446ad919e1d7eab6ff83c94873f0f1.js": "/landing-page/precache-manifest.cd446ad919e1d7eab6ff83c94873f0f1.js",
+  "precache-manifest.308dc5423f98c7c26b524b5dd88b0306.js": "/landing-page/precache-manifest.308dc5423f98c7c26b524b5dd88b0306.js",
   "service-worker.js": "/landing-page/service-worker.js"
 }
