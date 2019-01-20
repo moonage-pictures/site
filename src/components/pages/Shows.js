@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 import axios from "axios";
 import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
@@ -35,56 +36,96 @@ export default class Shows extends Component {
       "http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/162"
     );
     this.setState({ shows, title, loading: false });
+    console.log("state in shows is: ", this.state);
   };
 
+  getGalleryLinks = galleryInfo =>
+    galleryInfo
+      .split("src=")
+      .map(imgLink =>
+        imgLink.substring(1, imgLink.indexOf(imgLink.match(/.jpg|.jpeg|.png/)))
+      );
+
+  successState = () => this.setState({ playerLoaded: true });
+
   render() {
-    const { loading, shows } = this.state;
+    const { playerLoaded, shows } = this.state;
     return (
       <Fragment>
         <Navbar />
         <div className="container fade">
-        <section className="section">
-        {loading && <Loader />}
-            <div className="columns is-centered is-multiline">
-              <div className="column is-half-desktop ">
-                <h1
-                  className="title is-1 section-header"
-                  style={{ textAlign: "center" }}
-                >
-                  Curfew
-                </h1>
-              </div>
-            </div>
-            <div className="columns is-centered is-multiline">
-              {shows.map(show => (
-                <div className="column is-one-third" key={show.id}>
-                  <Link
-                    to={{
-                      pathname: `shows/${show.showLink}`,
-                      state: { show }
-                    }}
-                  >
-                    <figure className="image is-16by9 show-thumbnail">
-                      <img
-                        className=""
-                        src={show.acf.bannerImage.url}
-                        alt={show.acf.bannerImage.alt}
-                      />
-                    </figure>
-                    <h4
-                      className="subtitle is-4 sub-title"
-                      style={{
-                        color: "white",
-                        textAlign: "center",
-                        cursor: "pointer"
-                      }}
+          <section className="section">
+            {shows.map(show => (
+              <Fragment key={show.id}>
+                <div className="columns is-centered is-multiline">
+                  <div className="column is-half-desktop ">
+                    <h1
+                      className="title is-1 section-header"
+                      style={{ textAlign: "center" }}
                     >
                       {show.title.rendered}
-                    </h4>
-                  </Link>
+                    </h1>
+                  </div>
                 </div>
-              ))}
-            </div>
+                <div className="columns is-multiline is-centered">
+                  <div className="column is-one-third">
+                    <p className="image is-1by1" style={{ cursor: "pointer" }}>
+                      <img
+                        src={show.acf.bannerImage.url}
+                        alt={`${show.title.rendered} screenshot`}
+                      />
+                    </p>
+                  </div>
+                  <div className="column is-one-third">
+                    {window.innerWidth >= 1024 ? (
+                      <div
+                        className="image is-1by1"
+                        style={{ paddingTop: "1rem" }}
+                      >
+                        {!playerLoaded && <Loader section="trailer" />}{" "}
+                        <div className="fade">
+                        <ReactPlayer
+                          url={show.acf.trailerUrl}
+                          onReady={this.successState}
+                          controls
+                          style={{ height: "25vw", width: "25vw" }}
+                        />
+                        </div>
+                      </div>
+                    ) : (
+                      <Fragment>
+                      {!playerLoaded && <Loader section="trailer" />}{" "}
+                      <div className="fade">
+                        <ReactPlayer
+                          url={show.acf.trailerUrl}
+                          width="100%"
+                          onReady={this.successState}
+                          controls
+                        />
+                      </div>
+                      </Fragment>
+                    )}
+                  </div>
+                  {this.getGalleryLinks(show.acf.landscapeGallery)
+                    .slice(1)
+                    .map((img, i) => (
+                      <Fragment key={i}>
+                        <div className="column is-one-third">
+                          <p
+                            className="image is-1by1"
+                            style={{ cursor: "pointer" }}
+                          >
+                            <img
+                              src={img}
+                              alt={`${show.title.rendered} screenshot ${i + 1}`}
+                            />
+                          </p>
+                        </div>
+                      </Fragment>
+                    ))}
+                </div>
+              </Fragment>
+            ))}
           </section>
         </div>
         <Footer />
