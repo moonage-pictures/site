@@ -45,25 +45,25 @@ div.container {
   h3 {
     font-family: $heading-font;
     color: white;
+    text-transform: uppercase;
   }
 
   .section-header {
-    letter-spacing: -0.3rem;
     margin-top: 2rem;
   }
 }
 
 .section h1.title.is-1 {
-  font-size: 2.25rem;
+  font-size: 2.15rem;
 }
 
 .section h2, .sub-title{
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .section h3, .sub-title {
-  font-size: 1.5rem;
-  letter-spacing: -0.3rem;
+  font-size: 1.25rem;
+  text-transform: capitalize;
 }
 
 .section h2.people-name {
