@@ -24,7 +24,6 @@ export default class Show extends Component {
 
   render() {
     const { show, playerLoaded, imageModalActive } = this.state;
-    console.log('show is: ', show)
     return (
       <Fragment>
         <Navbar />

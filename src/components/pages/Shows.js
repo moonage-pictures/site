@@ -38,16 +38,21 @@ export default class Shows extends Component {
   };
 
   render() {
-    const { loading, title, shows } = this.state;
+    const { loading, shows } = this.state;
     return (
       <Fragment>
         <Navbar />
         <div className="container fade">
-          <section className="section">
-            {loading && <Loader />}
+        <section className="section">
+        {loading && <Loader />}
             <div className="columns is-centered is-multiline">
-              <div className="column is-full-width">
-                <h1 className="title is-1 section-header">{title}</h1>
+              <div className="column is-half-desktop ">
+                <h1
+                  className="title is-1 section-header"
+                  style={{ textAlign: "center" }}
+                >
+                  Curfew
+                </h1>
               </div>
             </div>
             <div className="columns is-centered is-multiline">
