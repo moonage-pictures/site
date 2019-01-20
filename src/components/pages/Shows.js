@@ -59,50 +59,58 @@ export default class Shows extends Component {
               <Fragment key={show.id}>
                 <div className="columns is-centered is-multiline">
                   <div className="column is-half-desktop ">
-                    <h1
-                      className="title is-1 section-header"
-                      style={{ textAlign: "center" }}
+                    <Link
+                      to={{
+                        pathname: `shows/${show.showLink}`,
+                        state: { show }
+                      }}
                     >
-                      {show.title.rendered}
-                    </h1>
+                      <h1
+                        className="title is-1 section-header"
+                        style={{ textAlign: "center" }}
+                      >
+                        {show.title.rendered}
+                      </h1>
+                    </Link>
                   </div>
                 </div>
                 <div className="columns is-multiline is-centered">
                   <div className="column is-one-third">
-                    <p className="image is-1by1" style={{ cursor: "pointer" }}>
+                    <figure className="image is-1by1" style={{ cursor: "pointer" }}>
                       <img
                         src={show.acf.bannerImage.url}
                         alt={`${show.title.rendered} screenshot`}
                       />
-                    </p>
+                    </figure>
                   </div>
                   <div className="column is-one-third">
                     {window.innerWidth >= 1024 ? (
                       <div
                         className="image is-1by1"
-                        style={{ paddingTop: "1rem" }}
+                        style={{ paddingTop: "0" }}
                       >
                         {!playerLoaded && <Loader section="trailer" />}{" "}
                         <div className="fade">
-                        <ReactPlayer
-                          url={show.acf.trailerUrl}
-                          onReady={this.successState}
-                          controls
-                          style={{ height: "25vw", width: "25vw" }}
-                        />
+                          <ReactPlayer
+                            url={show.acf.trailerUrl}
+                            onReady={this.successState}
+                            controls
+                            width="100%"
+                            style={{ height: "24.75vw"}}
+                          />
                         </div>
                       </div>
                     ) : (
                       <Fragment>
-                      {!playerLoaded && <Loader section="trailer" />}{" "}
-                      <div className="fade">
-                        <ReactPlayer
-                          url={show.acf.trailerUrl}
-                          width="100%"
-                          onReady={this.successState}
-                          controls
-                        />
-                      </div>
+                        {!playerLoaded && <Loader section="trailer" />}{" "}
+                        <div className="fade">
+                          <ReactPlayer
+                            url={show.acf.trailerUrl}
+                            width="100%"
+                            onReady={this.successState}
+                            controls
+                          />
+                        </div>
                       </Fragment>
                     )}
                   </div>
@@ -110,17 +118,27 @@ export default class Shows extends Component {
                     .slice(1)
                     .map((img, i) => (
                       <Fragment key={i}>
-                        <div className="column is-one-third">
-                          <p
-                            className="image is-1by1"
-                            style={{ cursor: "pointer" }}
-                          >
-                            <img
-                              src={img}
-                              alt={`${show.title.rendered} screenshot ${i + 1}`}
-                            />
-                          </p>
-                        </div>
+                       
+                          <div className="column is-one-third">
+                          <Link
+                          to={{
+                            pathname: `shows/${show.showLink}`,
+                            state: { show }
+                          }}
+                        >
+                            <figure
+                              className="image is-1by1"
+                              style={{ cursor: "pointer" }}
+                            >
+                              <img
+                                src={img}
+                                alt={`${show.title.rendered} screenshot ${i +
+                                  1}`}
+                              />
+                            </figure>
+                            </Link>
+                          </div>
+                     
                       </Fragment>
                     ))}
                 </div>
