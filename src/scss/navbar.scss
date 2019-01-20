@@ -105,12 +105,6 @@ nav.navbar {
   }
 }
 
-@media (max-width: 768px) {
-  nav.navbar {
-    height: 5vh;
-  }
-}
-
 @media (max-width: 1088px) {
   a span {
     color: white;
@@ -177,5 +171,11 @@ nav.navbar {
     .contact-active {
       margin-top: 0;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  nav.navbar {
+    height: 1vh;
   }
 }
