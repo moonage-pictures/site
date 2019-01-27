@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c1ab34893a9d266bf09b",
-    "url": "/landing-page/static/css/main.ef82a50e.chunk.css"
+    "revision": "f559fb5af79243785364",
+    "url": "/landing-page/static/css/main.fed6e733.chunk.css"
   },
   {
-    "revision": "c1ab34893a9d266bf09b",
-    "url": "/landing-page/static/js/main.c1ab3489.chunk.js"
+    "revision": "f559fb5af79243785364",
+    "url": "/landing-page/static/js/main.f559fb5a.chunk.js"
   },
   {
     "revision": "21a51bbbbeb72f8d881a",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/landing-page/static/media/lulo-clean-one.bda4e77e.otf"
   },
   {
-    "revision": "81eaaa1563fe7df25908bf77a60447b5",
+    "revision": "c70f9898680fa432f9c16e61bc5427ad",
     "url": "/landing-page/index.html"
   }
 ];
