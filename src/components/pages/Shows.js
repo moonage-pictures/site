@@ -57,33 +57,33 @@ export default class Shows extends Component {
           <section className="section">
             {shows.map(show => (
               <Fragment key={show.id}>
-                <div className="columns is-centered is-multiline">
-                  <div className="column is-half-desktop ">
-                    <Link
-                      to={{
-                        pathname: `shows/${show.showLink}`,
-                        state: { show }
-                      }}
-                    >
-                      <h1
-                        className="title is-1 section-header"
-                        style={{ textAlign: "center" }}
-                      >
-                        {show.title.rendered}
-                      </h1>
-                    </Link>
-                  </div>
-                </div>
                 <div className="columns is-multiline is-centered">
-                  <div className="column is-one-third">
-                    <figure className="image is-1by1" style={{ cursor: "pointer" }}>
-                      <img
-                        src={show.acf.bannerImage.url}
-                        alt={`${show.title.rendered} screenshot`}
-                      />
-                    </figure>
-                  </div>
-                  <div className="column is-one-third">
+                  {this.getGalleryLinks(show.acf.landscapeGallery)
+                    .slice(1)
+                    .map((img, i) => (
+                      <Fragment key={i}>
+                        <div className="column is-one-third">
+                          <Link
+                            to={{
+                              pathname: `shows/${show.showLink}`,
+                              state: { show }
+                            }}
+                          >
+                            <figure
+                              className="image is-1by1"
+                              style={{ cursor: "pointer" }}
+                            >
+                              <img
+                                src={img}
+                                alt={`${show.title.rendered} screenshot ${i +
+                                  1}`}
+                              />
+                            </figure>
+                          </Link>
+                        </div>
+                      </Fragment>
+                    ))}
+                     <div className="column is-one-third">
                     {window.innerWidth >= 1024 ? (
                       <div
                         className="image is-1by1"
@@ -96,7 +96,7 @@ export default class Shows extends Component {
                             onReady={this.successState}
                             controls
                             width="100%"
-                            style={{ height: "24.75vw"}}
+                            style={{ height: "24.75vw" }}
                           />
                         </div>
                       </div>
@@ -114,33 +114,17 @@ export default class Shows extends Component {
                       </Fragment>
                     )}
                   </div>
-                  {this.getGalleryLinks(show.acf.landscapeGallery)
-                    .slice(1)
-                    .map((img, i) => (
-                      <Fragment key={i}>
-                       
-                          <div className="column is-one-third">
-                          <Link
-                          to={{
-                            pathname: `shows/${show.showLink}`,
-                            state: { show }
-                          }}
-                        >
-                            <figure
-                              className="image is-1by1"
-                              style={{ cursor: "pointer" }}
-                            >
-                              <img
-                                src={img}
-                                alt={`${show.title.rendered} screenshot ${i +
-                                  1}`}
-                              />
-                            </figure>
-                            </Link>
-                          </div>
-                     
-                      </Fragment>
-                    ))}
+                  <div className="column is-one-third">
+                    <figure
+                      className="image is-1by1"
+                      style={{ cursor: "pointer" }}
+                    >
+                      <img
+                        src={show.acf.bannerImage.url}
+                        alt={`${show.title.rendered} screenshot`}
+                      />
+                    </figure>
+                  </div>
                 </div>
               </Fragment>
             ))}

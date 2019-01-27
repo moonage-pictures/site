@@ -161,8 +161,9 @@ h1.inner-circle {
   color: black;
   text-transform: uppercase;
   font-family: $heading-font;
-  font-size: 2.5vw;
-  // letter-spacing: -0.4rem;
+  font-size: 1.8vw;
+  letter-spacing: 0.4rem;
+  line-height: 1.75rem;
 }
 
 
@@ -228,8 +229,8 @@ h1.inner-circle {
     position: absolute;
     top: 65vh;
     left: 33vh;
-    width: 20vh;
-    height: 20vh;
+    width: 21vh;
+    height: 21vh;
   }
   
   .shows {
@@ -244,8 +245,8 @@ h1.inner-circle {
     position: absolute;
     top: 65vh;
     left: 8vh;
-    height: 15vh;
-    width: 15vh;
+    height: 16vh;
+    width: 16vh;
   }
   
   .blank-one {
@@ -299,10 +300,12 @@ h1.inner-circle {
 
   .circle {
     border-radius: 100%;
+  
   }
 
   h1.inner-circle {
-    font-size: 3.5vh;
+    font-size: 2.75vh;
+    
   }
 
   .home-logo {
