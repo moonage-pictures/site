@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/landing-page/static/media/lulo-clean-one.bda4e77e.otf"
   },
   {
-    "revision": "e6a80ae326e3af33d5052c9c3a556261",
+    "revision": "76a20e414d676feb21fa8d62cc779faa",
     "url": "/landing-page/index.html"
   }
 ];
