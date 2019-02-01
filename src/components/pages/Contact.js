@@ -3,6 +3,7 @@ import axios from "axios";
 import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
 import { Loader } from "../common/Loader";
+import GoogleMap from '../common/GoogleMap'
 
 export default class Contact extends Component {
   state = {
@@ -34,10 +35,10 @@ export default class Contact extends Component {
             {loading ? (
               <Loader />
             ) : (
-              <div className="columns is-centered">
+              <div className="columns is-centered is-multiline">
                 <div className="column is-two-thirds-desktop ">
                   <h1 className="title is-1 section-header">{title}</h1>
-                  <div className="columns">
+                  <div className="columns is-multiline">
                     <div className="column is-one-third-desktop">
                       <h3 className="sub-title">Address</h3>
                       <div className="page-content">
@@ -46,7 +47,12 @@ export default class Contact extends Component {
                             __html: contactInfo.address
                           }}
                         />
+                        
                       </div>
+                    </div>
+                    
+                    <div className="column is-two-thirds-desktop">
+                    <GoogleMap location={{lat: 51.515108, lng: -0.1376354}} />
                     </div>
                     <div className="column is-one-third-desktop">
                       <h3 className="sub-title">Telephone</h3>
