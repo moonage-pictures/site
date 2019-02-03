@@ -40,6 +40,11 @@ div.container {
     color: white;
     font-size: 1rem;
     margin: 1rem;
+    a {
+      &:hover {
+        color: $blue;
+      }
+    }
   }
 }
 
@@ -49,6 +54,7 @@ div.container {
   h3 {
     font-family: $heading-font;
     color: white;
+    font-weight: 400;
     text-transform: uppercase;
   }
 
@@ -97,9 +103,5 @@ footer {
     margin-top: 5vh;
     margin-bottom: 10vh;
   }
-
-  // footer {
-  //   position: relative;
-  // }
 
 }

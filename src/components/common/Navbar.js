@@ -84,7 +84,7 @@ class Navbar extends Component {
                   : ""
               }`}
             >
-              Dream
+              Daydream
             </Link>
             <Link
               to="/contact"

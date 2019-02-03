@@ -36,7 +36,6 @@ export default class Shows extends Component {
       "http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/162"
     );
     this.setState({ shows, title, loading: false });
-    console.log("state in shows is: ", this.state);
   };
 
   getGalleryLinks = galleryInfo =>
@@ -57,12 +56,12 @@ export default class Shows extends Component {
           <section className="section">
             {shows.map(show => (
               <Fragment key={show.id}>
-                <div className="columns is-multiline is-centered">
+                <div className="columns is-multiline is-centered is-mobile">
                   {this.getGalleryLinks(show.acf.landscapeGallery)
                     .slice(1)
                     .map((img, i) => (
                       <Fragment key={i}>
-                        <div className="column is-one-third">
+                        <div className="column is-one-quarter-desktop is-half-mobile">
                           <Link
                             to={{
                               pathname: `shows/${show.showLink}`,
@@ -83,7 +82,7 @@ export default class Shows extends Component {
                         </div>
                       </Fragment>
                     ))}
-                     <div className="column is-one-third">
+                     <div className="column is-one-quarter-desktop is-full-mobile">
                     {window.innerWidth >= 1024 ? (
                       <div
                         className="image is-1by1"
@@ -96,7 +95,7 @@ export default class Shows extends Component {
                             onReady={this.successState}
                             controls
                             width="100%"
-                            style={{ height: "24.75vw" }}
+                            style={{ height: "18vw" }}
                           />
                         </div>
                       </div>
@@ -114,7 +113,7 @@ export default class Shows extends Component {
                       </Fragment>
                     )}
                   </div>
-                  <div className="column is-one-third">
+                  <div className="column is-one-quarter-desktop is-half-mobile">
                     <figure
                       className="image is-1by1"
                       style={{ cursor: "pointer" }}
