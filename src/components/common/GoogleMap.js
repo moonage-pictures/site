@@ -6,7 +6,7 @@ class GoogleMap extends React.Component {
   componentDidMount() {
     this.map = new google.maps.Map(this.mapCanvas, {
       center: this.props.location,
-      zoom: 14
+      zoom: 15
     });
 
     this.marker = new google.maps.Marker({

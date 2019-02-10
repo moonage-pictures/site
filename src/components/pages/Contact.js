@@ -40,23 +40,12 @@ export default class Contact extends Component {
                   <h1 className="title is-1 section-header">{title}</h1>
                   <div className="columns is-multiline">
                     <div className="column is-one-third-desktop">
-                      <h3 className="sub-title">Address</h3>
                       <div className="page-content">
-                        <p
+                        <p style={{marginTop: 0}}
                           dangerouslySetInnerHTML={{
                             __html: contactInfo.address
                           }}
                         />
-                        
-                      </div>
-                    </div>
-                    
-                    <div className="column is-two-thirds-desktop">
-                    <GoogleMap location={{lat: 51.515108, lng: -0.1376354}} />
-                    </div>
-                    <div className="column is-one-third-desktop">
-                      <h3 className="sub-title">Telephone</h3>
-                      <div className="page-content">
                         <p>
                           <a
                             href={`tel:${contactInfo.telephone}`}
@@ -67,11 +56,6 @@ export default class Contact extends Component {
                             {contactInfo.telephone}
                           </a>
                         </p>
-                      </div>
-                    </div>
-                    <div className="column is-one-third-desktop">
-                      <h3 className="sub-title">Email</h3>
-                      <div className="page-content">
                         <p>
                           <a
                             href={`mailto:${contactInfo.email}`}
@@ -82,11 +66,18 @@ export default class Contact extends Component {
                             {contactInfo.email}
                           </a>
                         </p>
+                        
                       </div>
                     </div>
+                    
+                    <div className="column is-two-thirds-desktop">
+                    <GoogleMap location={{lat: 51.515108, lng: -0.1376354}} />
+                    </div>
+                    
                   </div>
                   <div
                     className="page-content"
+                    style={{textAlign: "center"}}
                     dangerouslySetInnerHTML={{ __html: body }}
                   />
                 </div>

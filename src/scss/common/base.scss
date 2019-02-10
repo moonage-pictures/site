@@ -74,7 +74,7 @@ div.container {
 
 .section h3, .sub-title {
   font-size: 1.15rem;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .section h2.people-name {
@@ -84,9 +84,9 @@ div.container {
 footer {
   background-color: black;
   width: 100%;
-  position: fixed;
   left: 0px;
   bottom: 0px;
+  padding: 0;
 
   .footer-content {
     margin: 0 auto;
@@ -103,5 +103,10 @@ footer {
     margin-top: 5vh;
     margin-bottom: 10vh;
   }
+
+  footer {
+    position: static;
+  }
+  
 
 }
