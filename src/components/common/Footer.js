@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
 
@@ -9,12 +11,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default class Footer extends Component {
-  
+
   render() {
     return (
       <footer style={window.location.pathname === '/' || window.innerWidth < 1024 ? {position: "static"} :  {position: "fixed"}}>
         <div className="columns">
-          <div className="column is-half is-offset-one-quarter">
+          <div className="column is-half is-offset-one-quarter" style={{padding: "0.75rem 0 0 0"}}>
             <div className="footer-content">
               <a
                 href="https://www.facebook.com/MoonagePics/"
@@ -23,7 +25,7 @@ export default class Footer extends Component {
               >
                 <FontAwesomeIcon
                   icon={faFacebook}
-                  size={"5x"}
+                  size={"4x"}
                   color="white"
                   style={{ paddingRight: "2rem", marginLeft: "2rem" }}
                 />
@@ -35,7 +37,7 @@ export default class Footer extends Component {
               >
                 <FontAwesomeIcon
                   icon={faTwitter}
-                  size={"5x"}
+                  size={"4x"}
                   color="white"
                   style={{ paddingRight: "2rem" }}
                 />
@@ -47,26 +49,21 @@ export default class Footer extends Component {
               >
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  size={"5x"}
+                  size={"4x"}
                   color="white"
                   style={{ paddingRight: "2rem" }}
                 />
               </a>
             </div>
           </div>
-          {window.location.pathname !== '/' && 
+        </div>
+        {window.location.pathname !== '/' &&
+        <div className="columns">
           <div
-            className="column"
-            style={{
-              display: "flex",
-              alignContent: "flex-end",
-              alignItems: "flex-end",
-              justifyContent: "flex-end",
-              verticalAlign: "flex-end"
-            }}
+            className="column is-half is-offset-one-quarter"style={{marginTop: 0, paddingTop: 0}}
           >
-            <p style={{fontSize: ".75rem"}}>
-              Copyright Moonage Pictures&#169; {moment().format("YYYY")} <br />
+            <p style={{fontSize: ".75rem", margin: 0, padding: 0, textAlign: 'center'}}>
+              Copyright Moonage Pictures Limited&#169; {moment().format("YYYY")}. <Link to="/privacy-policy" style={{color: "white"}}>Privacy Policy</Link> <br />
               Designed by{" "}
               <a
                 href="http://richardtzanov.com"
@@ -77,8 +74,9 @@ export default class Footer extends Component {
                 richardtzanov.com
               </a>
             </p>
-          </div>}
+          </div>
         </div>
+        }
       </footer>
     );
   }

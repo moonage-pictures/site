@@ -87,6 +87,8 @@ footer {
   left: 0px;
   bottom: 0px;
   padding: 0;
+  align-content: flex-end;
+  align-items: baseline;
 
   .footer-content {
     margin: 0 auto;
@@ -107,6 +109,6 @@ footer {
   footer {
     position: static;
   }
-  
+
 
 }

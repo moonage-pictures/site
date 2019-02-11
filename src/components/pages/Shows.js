@@ -48,12 +48,13 @@ export default class Shows extends Component {
   successState = () => this.setState({ playerLoaded: true });
 
   render() {
-    const { playerLoaded, shows } = this.state;
+    const { playerLoaded, shows, loading } = this.state;
     return (
       <Fragment>
         <Navbar />
         <div className="container fade">
           <section className="section">
+            {loading && <Loader />}
             {shows.map(show => (
               <Fragment key={show.id}>
                 <div className="columns is-multiline is-centered is-mobile">
