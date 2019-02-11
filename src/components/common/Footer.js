@@ -57,7 +57,7 @@ export default class Footer extends Component {
             </div>
           </div>
         </div>
-        {window.location.pathname !== '/' &&
+
         <div className="columns">
           <div
             className="column is-half is-offset-one-quarter"style={{marginTop: 0, paddingTop: 0}}
@@ -76,7 +76,7 @@ export default class Footer extends Component {
             </p>
           </div>
         </div>
-        }
+        
       </footer>
     );
   }
