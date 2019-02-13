@@ -15,7 +15,7 @@ export default class News extends Component {
   componentDidMount = async () => {
     window.scrollTo(0, 0);
     const { data: pressReleases } = await axios({
-      url: "http://3jd.d66.myftpupload.com/wp-json/wp/v2/posts?categories=5",
+      url: "https://cms.moonagepictures.com/wp-json/wp/v2/posts?categories=5",
       method: "GET"
     });
     const {
@@ -23,7 +23,7 @@ export default class News extends Component {
         title: { rendered: title }
       }
     } = await axios.get(
-      "http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/486"
+      "https://cms.moonagepictures.com/wp-json/wp/v2/pages/486"
     );
     this.setState({ pressReleases, title, loading: false });
   };

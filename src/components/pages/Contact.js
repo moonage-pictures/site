@@ -15,7 +15,7 @@ export default class Contact extends Component {
   componentDidMount = async () => {
     window.scrollTo(0, 0);
     const { data } = await axios.get(
-      "http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/19"
+      "https://cms.moonagepictures.com/wp-json/wp/v2/pages/19"
     );
     this.setState({
       title: data.title.rendered,
@@ -66,14 +66,14 @@ export default class Contact extends Component {
                             {contactInfo.email}
                           </a>
                         </p>
-                        
+
                       </div>
                     </div>
-                    
+
                     <div className="column is-two-thirds-desktop">
                     <GoogleMap location={{lat: 51.515108, lng: -0.1376354}} />
                     </div>
-                    
+
                   </div>
                   <div
                     className="page-content"

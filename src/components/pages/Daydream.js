@@ -13,7 +13,7 @@ export default class Daydream extends Component {
   componentDidMount = async () => {
     window.scrollTo(0, 0);
     const { data } = await axios({
-      url: "http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/160",
+      url: "https://cms.moonagepictures.com/wp-json/wp/v2/pages/160",
       method: "GET"
     });
     this.setState({

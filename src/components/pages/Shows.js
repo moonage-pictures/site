@@ -16,7 +16,7 @@ export default class Shows extends Component {
   componentDidMount = async () => {
     window.scrollTo(0, 0);
     const { data: shows } = await axios({
-      url: "http://3jd.d66.myftpupload.com/wp-json/wp/v2/posts?categories=4",
+      url: "https://cms.moonagepictures.com/wp-json/wp/v2/posts?categories=4",
       method: "GET"
     });
 
@@ -33,7 +33,7 @@ export default class Shows extends Component {
         title: { rendered: title }
       }
     } = await axios.get(
-      "http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/162"
+      "https://cms.moonagepictures.com/wp-json/wp/v2/pages/162"
     );
     this.setState({ shows, title, loading: false });
   };

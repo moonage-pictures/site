@@ -13,7 +13,7 @@ export default class Company extends Component {
   componentDidMount = async () => {
     window.scrollTo(0, 0);
     const { data } = await axios({
-      url: "http://3jd.d66.myftpupload.com/wp-json/wp/v2/pages/2",
+      url: "https://cms.moonagepictures.com/wp-json/wp/v2/pages/2",
       method: "GET"
     });
     this.setState({
