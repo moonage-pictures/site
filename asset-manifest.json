@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.edcfda42.chunk.css",
-  "main.js": "/static/js/main.835f9210.chunk.js",
-  "main.js.map": "/static/js/main.835f9210.chunk.js.map",
+  "main.js": "/static/js/main.fb391a29.chunk.js",
+  "main.js.map": "/static/js/main.fb391a29.chunk.js.map",
   "static/css/1.cf919d4d.chunk.css": "/static/css/1.cf919d4d.chunk.css",
   "static/js/1.6abc23db.chunk.js": "/static/js/1.6abc23db.chunk.js",
   "static/js/1.6abc23db.chunk.js.map": "/static/js/1.6abc23db.chunk.js.map",
@@ -12,6 +12,6 @@
   "static/media/index.scss": "/static/media/lulo-clean-one.bda4e77e.otf",
   "static/css/1.cf919d4d.chunk.css.map": "/static/css/1.cf919d4d.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.f9fd7cc0448430283449f997ab274553.js": "/precache-manifest.f9fd7cc0448430283449f997ab274553.js",
+  "precache-manifest.d848d4b5485940550e1d9fa93f8e1a86.js": "/precache-manifest.d848d4b5485940550e1d9fa93f8e1a86.js",
   "service-worker.js": "/service-worker.js"
 }
