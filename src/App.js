@@ -9,6 +9,7 @@ import Company from "./components/pages/Company";
 import People from "./components/pages/People";
 import Daydream from "./components/pages/Daydream";
 import Contact from "./components/pages/Contact";
+import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
           <Route path="/people" component={People} />
           <Route path="/daydream" component={Daydream} />
           <Route path="/contact" component={Contact} />
+          <Route path="/privacy-policy" component={PrivacyPolicy} />
         </Switch>
         </Fragment>
       </BrowserRouter>
