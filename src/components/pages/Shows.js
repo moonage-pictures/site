@@ -83,7 +83,7 @@ export default class Shows extends Component {
                         </div>
                       </Fragment>
                     ))}
-                     <div className="column is-one-quarter-desktop is-full-mobile">
+                  <div className="column is-one-quarter-desktop is-full-mobile">
                     {window.innerWidth >= 1024 ? (
                       <div
                         className="image is-1by1"
@@ -115,15 +115,22 @@ export default class Shows extends Component {
                     )}
                   </div>
                   <div className="column is-one-quarter-desktop is-half-mobile">
-                    <figure
-                      className="image is-1by1"
-                      style={{ cursor: "pointer" }}
+                    <Link
+                      to={{
+                        pathname: `shows/${show.showLink}`,
+                        state: { show }
+                      }}
                     >
-                      <img
-                        src={show.acf.bannerImage.url}
-                        alt={`${show.title.rendered} screenshot`}
-                      />
-                    </figure>
+                      <figure
+                        className="image is-1by1"
+                        style={{ cursor: "pointer" }}
+                      >
+                        <img
+                          src={show.acf.bannerImage.url}
+                          alt={`${show.title.rendered} screenshot`}
+                        />
+                      </figure>
+                    </Link>
                   </div>
                 </div>
               </Fragment>
