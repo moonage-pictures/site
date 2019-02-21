@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
-import ReactPlayer from "react-player";
 import axios from "axios";
 import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
@@ -45,10 +44,8 @@ export default class Shows extends Component {
         imgLink.substring(1, imgLink.indexOf(imgLink.match(/.jpg|.jpeg|.png/)))
       );
 
-  successState = () => this.setState({ playerLoaded: true });
-
   render() {
-    const { playerLoaded, shows, loading } = this.state;
+    const { shows, loading } = this.state;
     return (
       <Fragment>
         <Navbar />
@@ -83,55 +80,6 @@ export default class Shows extends Component {
                         </div>
                       </Fragment>
                     ))}
-                  <div className="column is-one-quarter-desktop is-full-mobile">
-                    {window.innerWidth >= 1024 ? (
-                      <div
-                        className="image is-1by1"
-                        style={{ paddingTop: "0" }}
-                      >
-                        {!playerLoaded && <Loader section="trailer" />}{" "}
-                        <div className="fade">
-                          <ReactPlayer
-                            url={show.acf.trailerUrl}
-                            onReady={this.successState}
-                            controls
-                            width="100%"
-                            style={{ height: "18vw" }}
-                          />
-                        </div>
-                      </div>
-                    ) : (
-                      <Fragment>
-                        {!playerLoaded && <Loader section="trailer" />}{" "}
-                        <div className="fade">
-                          <ReactPlayer
-                            url={show.acf.trailerUrl}
-                            width="100%"
-                            onReady={this.successState}
-                            controls
-                          />
-                        </div>
-                      </Fragment>
-                    )}
-                  </div>
-                  <div className="column is-one-quarter-desktop is-half-mobile">
-                    <Link
-                      to={{
-                        pathname: `shows/${show.showLink}`,
-                        state: { show }
-                      }}
-                    >
-                      <figure
-                        className="image is-1by1"
-                        style={{ cursor: "pointer" }}
-                      >
-                        <img
-                          src={show.acf.bannerImage.url}
-                          alt={`${show.title.rendered} screenshot`}
-                        />
-                      </figure>
-                    </Link>
-                  </div>
                 </div>
               </Fragment>
             ))}

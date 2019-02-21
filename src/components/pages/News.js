@@ -25,6 +25,7 @@ export default class News extends Component {
     } = await axios.get(
       "https://cms.moonagepictures.com/wp-json/wp/v2/pages/486"
     );
+    console.log("pressReleases are: ", pressReleases);
     this.setState({ pressReleases, title, loading: false });
   };
 
@@ -41,6 +42,31 @@ export default class News extends Component {
                 <h1 className="title is-1 section-header">{title}</h1>
                 {pressReleases.map(pressRelease => (
                   <Fragment key={pressRelease.id}>
+                    <div className="page-content">
+                      <p>
+                        <small>
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: moment(pressRelease.date).format(
+                                "MMMM D, YYYY"
+                              )
+                            }}
+                          />
+                          {pressRelease.acf.publication && (
+                            <span>
+                              {" "}
+                              —{" "}
+                              (Read more from the {pressRelease.acf.byline && <span>{pressRelease.acf.byline} </span>}<span><a
+                                href={pressRelease.acf.newsLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {pressRelease.acf.publication.toUpperCase()}
+                              </a> article here)
+                            </span></span>)}
+                        </small>
+                      </p>
+                    </div>
                     <h2 className="sub-title">{pressRelease.title.rendered}</h2>
                     <div
                       className="page-content"
@@ -48,22 +74,7 @@ export default class News extends Component {
                         __html: pressRelease.content.rendered
                       }}
                     />
-                    <div className="page-content">
-                      <p>
-                        <small>
-                          <em>
-                            Published on:{" "}
-                            <span
-                              dangerouslySetInnerHTML={{
-                                __html: moment(pressRelease.date).format(
-                                  "MMMM Do YYYY, h:mm a"
-                                )
-                              }}
-                            />
-                          </em>
-                        </small>
-                      </p>
-                    </div>
+
                     <hr />
                   </Fragment>
                 ))}
