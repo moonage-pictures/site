@@ -14,7 +14,7 @@ export default class Footer extends Component {
 
   render() {
     return (
-      <footer style={window.location.pathname === '/' || window.location.pathname === '/landing-page/' || window.innerWidth < 1024 ? {position: "static"} :  {position: "fixed"}}>
+      <footer style={window.location.pathname === '/' || window.innerWidth < 1024 ? {position: "static"} :  {position: "fixed"}}>
         <div className="columns">
           <div className="column is-half is-offset-one-quarter" style={{padding: "0.75rem 0 0 0"}}>
             <div className="footer-content">
