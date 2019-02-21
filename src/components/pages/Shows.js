@@ -59,7 +59,7 @@ export default class Shows extends Component {
                     .slice(1)
                     .map((img, i) => (
                       <Fragment key={i}>
-                        <div className="column is-one-quarter-desktop is-half-mobile">
+                        <div className="column is-one-quarter-desktop is-half-mobile is-one-quarter-tablet">
                           <Link
                             to={{
                               pathname: `shows/${show.showLink}`,

@@ -54,7 +54,7 @@ export default class Show extends Component {
                         onReady={this.successState}
                         controls
                         width="100%"
-                        style={{height: "30vw"}}
+                        style={{height: "24vw"}}
                       />
                     </div>
                   </div>
