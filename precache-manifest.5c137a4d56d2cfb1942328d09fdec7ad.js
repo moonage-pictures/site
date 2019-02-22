@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "349170a305333499904f",
+    "revision": "80174a3311b17ce10f3f",
     "url": "/static/css/main.66601f10.chunk.css"
   },
   {
-    "revision": "349170a305333499904f",
-    "url": "/static/js/main.349170a3.chunk.js"
+    "revision": "80174a3311b17ce10f3f",
+    "url": "/static/js/main.80174a33.chunk.js"
   },
   {
     "revision": "02dd068eaa29cb3cd753",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/static/media/lulo-clean-one.bda4e77e.otf"
   },
   {
-    "revision": "eafd74d4bce718fc6af94e0e66e65cfa",
+    "revision": "2e23b1363a4b33e71a9f0f8d34f88f3c",
     "url": "/index.html"
   }
 ];
