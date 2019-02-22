@@ -62,7 +62,7 @@ export default class Shows extends Component {
                         <div className="column is-one-quarter-desktop is-half-mobile is-one-quarter-tablet">
                           <Link
                             to={{
-                              pathname: `curfew`,
+                              pathname: `shows/${show.showLink}`,
                               state: { show }
                             }}
                           >
