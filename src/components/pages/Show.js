@@ -8,9 +8,8 @@ import { Loader } from "../common/Loader";
 
 export default class Show extends Component {
   state = {
-    show: this.props.location.state.show || null,
+    // show: this.props.location.state.show || null,
     playerLoaded: false,
-    imageModalActive: {},
     loading: true
   };
 
