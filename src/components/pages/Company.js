@@ -16,16 +16,12 @@ export default class Company extends Component {
       url: "https://cms.moonagepictures.com/wp-json/wp/v2/pages/2",
       method: "GET"
     });
-    console.log("data is: ", data);
-    this.setState(
-      {
-        body: data.content.rendered,
-        title: data.title.rendered,
-        loading: false,
-        companyImage: data.acf.companyImage
-      },
-      () => console.log("state is: ", this.state)
-    );
+    this.setState({
+      body: data.content.rendered,
+      title: data.title.rendered,
+      loading: false,
+      companyImage: data.acf.companyImage
+    });
   };
 
   render() {

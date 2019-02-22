@@ -25,7 +25,6 @@ export default class News extends Component {
     } = await axios.get(
       "https://cms.moonagepictures.com/wp-json/wp/v2/pages/486"
     );
-    console.log("pressReleases are: ", pressReleases);
     this.setState({ pressReleases, title, loading: false });
   };
 
