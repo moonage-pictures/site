@@ -36,11 +36,7 @@ export default class Home extends Component {
           </Link>
           <Link to="/daydream">
             <div className="circle yellow daydream">
-              <h1 className="inner-circle">
-                Day
-                <br />
-                Dream
-              </h1>
+              <h1 className="inner-circle">Day<br />Dream</h1>
             </div>
           </Link>
 

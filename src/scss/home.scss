@@ -46,7 +46,6 @@
   height: 15vw;
 }
 
-
 .daydream {
   position: absolute;
   top: 33vw;
@@ -87,7 +86,6 @@
   width: 8vw;
   height: 8vw;
 }
-
 
 .blank-six {
   position: absolute;
@@ -166,7 +164,6 @@ h1.inner-circle {
 
 
 @media (max-width: 769px) {
-
   .company {
     position: absolute;
     top: 3vh;
@@ -182,7 +179,6 @@ h1.inner-circle {
     width: 18vh;
     height: 18vh;
   }
-
 
   .people {
     position: absolute;
@@ -208,7 +204,7 @@ h1.inner-circle {
     height: 18vh;
   }
 
-    .daydream {
+  .daydream {
     position: absolute;
     top: 65vh;
     left: 8vh;
@@ -267,7 +263,6 @@ h1.inner-circle {
 
   .circle {
     border-radius: 100%;
-
   }
 
   h1.inner-circle {
@@ -279,5 +274,168 @@ h1.inner-circle {
     top: -5vw;
     left: 48vw;
     height: 24vh;
+  }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .home-wrapper {
+    height: 93vh;
+    background-color: black;
+  }
+
+  .company {
+    position: absolute;
+    top: 3vw;
+    left: 10vw;
+    width: 18vw;
+    height: 18vw;
+  }
+
+  .news {
+    position: absolute;
+    top: 3vw;
+    left: 36vw;
+    width: 16vw;
+    height: 16vw;
+  }
+
+  .people {
+    position: absolute;
+    top: 20vw;
+    left: 26vw;
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .contact {
+    position: absolute;
+    top: 17vw;
+    left: 64vw;
+    width: 17vw;
+    height: 17vw;
+  }
+
+  .shows {
+    position: absolute;
+    top: 27vw;
+    left: 44vw;
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .daydream {
+    position: absolute;
+    top: 33vw;
+    left: 78vw;
+    height: 11vw;
+    width: 11vw;
+  }
+
+  .blank-one {
+    display: block;
+    position: absolute;
+    top: 35vw;
+    left: 18vw;
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .blank-two {
+    position: absolute;
+    top: 16vw;
+    left: 53vw;
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .blank-three {
+    position: absolute;
+    top: 7vw;
+    left: 62vw;
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .blank-four {
+    position: absolute;
+    top: 35vw;
+    left: 62vw;
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .blank-six {
+    position: absolute;
+    top: 17vw;
+    left: 83vw;
+    height: 6vw;
+    width: 6vw;
+  }
+
+  .blank-seven {
+    position: absolute;
+    top: 23vw;
+    left: 15vw;
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .pumpkin {
+    background-color: $pumpkin;
+    background-image: $texture;
+  }
+
+  .white {
+    background-color: $white;
+    background-image: $texture;
+  }
+  .green {
+    background-color: $green;
+    background-image: $texture;
+  }
+
+  .yellow {
+    background-color: $yellow;
+    background-image: $texture;
+  }
+
+  .blue {
+    background-color: $blue;
+    background-image: $texture;
+  }
+
+  .pink {
+    background-color: $pink;
+    background-image: $texture;
+  }
+
+  .circle {
+    border-radius: 100%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .red {
+    background-color: $red;
+    background-image: $texture;
+  }
+
+  .home-logo {
+    position: absolute;
+    height: 15vw;
+    top: 0vw;
+    left: 73vw;
+  }
+  h1.inner-circle {
+    position: relative;
+    color: black;
+    text-transform: uppercase;
+    font-family: $heading-font;
+    font-size: 1.7vw;
+    letter-spacing: 0.2rem;
   }
 }
