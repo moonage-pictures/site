@@ -1,7 +1,7 @@
 {
-  "main.css": "/static/css/main.34e3ded2.chunk.css",
-  "main.js": "/static/js/main.9496206b.chunk.js",
-  "main.js.map": "/static/js/main.9496206b.chunk.js.map",
+  "main.css": "/static/css/main.da9bab4a.chunk.css",
+  "main.js": "/static/js/main.b8d0da41.chunk.js",
+  "main.js.map": "/static/js/main.b8d0da41.chunk.js.map",
   "static/css/1.6eb198bf.chunk.css": "/static/css/1.6eb198bf.chunk.css",
   "static/js/1.02dd068e.chunk.js": "/static/js/1.02dd068e.chunk.js",
   "static/js/1.02dd068e.chunk.js.map": "/static/js/1.02dd068e.chunk.js.map",
@@ -10,8 +10,8 @@
   "static/media/logo.svg": "/static/media/logo.a6bcd0cf.svg",
   "static/media/index.scss": "/static/media/lulo-clean-one.bda4e77e.otf",
   "static/css/1.6eb198bf.chunk.css.map": "/static/css/1.6eb198bf.chunk.css.map",
-  "static/css/main.34e3ded2.chunk.css.map": "/static/css/main.34e3ded2.chunk.css.map",
+  "static/css/main.da9bab4a.chunk.css.map": "/static/css/main.da9bab4a.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.13a58fe43d94ef6fa07a831b9b738c8c.js": "/precache-manifest.13a58fe43d94ef6fa07a831b9b738c8c.js",
+  "precache-manifest.9fc83955fdf8a1e42cd1052538713bf3.js": "/precache-manifest.9fc83955fdf8a1e42cd1052538713bf3.js",
   "service-worker.js": "/service-worker.js"
 }
