@@ -22,9 +22,53 @@ iframe[title="YouTube video player"] {
   cursor: pointer;
 }
 
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-right:30px solid white;
+  background-color: black; 
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid white;
+  background-color: black;
+}
+
+.carousel-container {
+
+  margin: 0;
+}
+
 @media (max-width: 769px)  {
   iframe[title="YouTube video player"] {
     height: 35vh;
   }
+
+ .mobile-arrows {
+   display: flex;
+   justify-content: space-between;
+  .arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-right:20px solid white;
+    background-color: black; 
+  }
   
+  .arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid white;
+    background-color: black;
+  }
+ } 
 }

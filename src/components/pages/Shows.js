@@ -19,13 +19,7 @@ export default class Shows extends Component {
       method: "GET"
     });
 
-    shows.map(
-      show =>
-        (show.showLink = show.title.rendered
-          .toLowerCase()
-          .split(" ")
-          .join("-"))
-    );
+    console.log('shows: ', shows)
 
     const {
       data: {
@@ -36,13 +30,6 @@ export default class Shows extends Component {
     );
     this.setState({ shows, title, loading: false });
   };
-
-  getGalleryLinks = galleryInfo =>
-    galleryInfo
-      .split("src=")
-      .map(imgLink =>
-        imgLink.substring(1, imgLink.indexOf(imgLink.match(/.jpg|.jpeg|.png/)))
-      );
 
   render() {
     const { shows, loading } = this.state;
@@ -55,15 +42,15 @@ export default class Shows extends Component {
             {shows.map(show => (
               <Fragment key={show.id}>
                 <div className="columns is-multiline is-centered is-mobile">
-                  {this.getGalleryLinks(show.acf.landscapeGallery)
-                    .slice(1)
+                  {show.acf.squareImages
                     .map((img, i) => (
                       <Fragment key={i}>
                         <div className="column is-one-quarter-desktop is-half-mobile is-one-quarter-tablet">
                           <Link
                             to={{
-                              pathname: `shows/${show.showLink}`,
-                              state: { show }
+                              pathname: `shows/${show.slug}`,
+                              show,
+                              img
                             }}
                           >
                             <figure
@@ -71,9 +58,8 @@ export default class Shows extends Component {
                               style={{ cursor: "pointer" }}
                             >
                               <img
-                                src={img}
-                                alt={`${show.title.rendered} screenshot ${i +
-                                  1}`}
+                                src={img.url}
+                                alt={img.alt}
                               />
                             </figure>
                           </Link>
