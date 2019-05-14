@@ -40,7 +40,7 @@ export default class Show extends Component {
     const startingImage = wideImages.splice(wideImages.indexOf(matchedImg));
     const newImageOrder = [...startingImage, ...wideImages];
 
-    this.setState({ wideImages: newImageOrder }, () => console.log('state', this.state));
+    this.setState({ wideImages: newImageOrder });
   };
 
   getShow = async () => {
