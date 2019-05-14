@@ -25,19 +25,23 @@ iframe[title="YouTube video player"] {
 .arrow-left {
   width: 0; 
   height: 0; 
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent; 
-  border-right:30px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right:10px solid white;
+  border-left: transparent;
   background-color: black; 
+  opacity: 0.5;
 }
 
 .arrow-right {
   width: 0; 
   height: 0; 
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 30px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
+  border-right: transparent;
   background-color: black;
+  opacity: 0.5;
 }
 
 .carousel-container {
@@ -56,19 +60,23 @@ iframe[title="YouTube video player"] {
   .arrow-left {
     width: 0; 
     height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent; 
-    border-right:20px solid white;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent; 
+    border-right: 5px solid white;
+    border-left: transparent;
     background-color: black; 
+    opacity: 0.5;
   }
   
   .arrow-right {
     width: 0; 
     height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid white;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid white;
+    border-right: transparent;
     background-color: black;
+    opacity: 0.5;
   }
  } 
 }

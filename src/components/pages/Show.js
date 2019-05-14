@@ -70,7 +70,7 @@ export default class Show extends Component {
                       naturalSlideWidth={16}
                       naturalSlideHeight={9}
                       totalSlides={show.acf.wideImages.length}
-                      interval={5000}
+                      interval={10000}
                       isPlaying={true}
                     >
                       <div className="columns is-vcentered is-full">
@@ -85,7 +85,6 @@ export default class Show extends Component {
                               <Slide index={i} key={i}>
                                 <figure
                                   className="image is-16by9"
-                                  style={{ height: "40vh" }}
                                 >
                                   <img src={img.url} alt={img.alt} />
                                 </figure>
