@@ -79,7 +79,7 @@ export default class Contact extends Component {
 
                     <div className="column is-two-thirds-desktop">
                       <GoogleMap
-                        location={{ lat: 51.515108, lng: -0.1376354 }}
+                        location={{ lat: 51.5148131, lng: -0.1318052 }}
                       />
                     </div>
                   </div>
