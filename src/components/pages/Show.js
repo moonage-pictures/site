@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import {
   CarouselProvider,
   Slider,
@@ -14,10 +14,14 @@ import Footer from "../common/Footer";
 import ReactPlayer from "react-player";
 import { Loader } from "../common/Loader";
 
-export default class Show extends Component {
+export default ({location}) => {
+  const [show, setShow] = useState(null)
+  const [img, setImg] = useState(null)
+  const [playerLoaded, setPlayerLoaded] = useState(false)
+
   state = {
-    show: this.props.location.show || null,
-    img: this.props.location.img || null,
+    show: location.show || null,
+    img: location.img || null,
     playerLoaded: false,
     loading: true,
     wideImages: []

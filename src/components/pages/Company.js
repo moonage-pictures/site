@@ -1,37 +1,25 @@
-import React, { Component, Fragment } from "react";
-import axios from "axios";
+import React, { useEffect, Fragment, useContext } from "react";
+import { MoonagePicturesContext } from "../../MoonagePictures";
 import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
 import { Loader } from "../common/Loader";
 
-export default class Company extends Component {
-  state = {
-    title: "",
-    body: "",
-    loading: true
-  };
-  componentDidMount = async () => {
+export default () => {
+  const {
+    companyData: { loading, title, body, companyImage }
+  } = useContext(MoonagePicturesContext);
+  useEffect(() => {
     window.scrollTo(0, 0);
-    const { data } = await axios({
-      url: "https://cms.moonagepictures.com/wp-json/wp/v2/pages/2",
-      method: "GET"
-    });
-    this.setState({
-      body: data.content.rendered,
-      title: data.title.rendered,
-      loading: false,
-      companyImage: data.acf.companyImage
-    });
-  };
+  }, []);
 
-  render() {
-    const { loading, title, body, companyImage } = this.state;
-    return (
-      <Fragment>
-        <Navbar />
-        <div className="container fade">
-          <section className="section">
-            {loading && <Loader />}
+  return (
+    <Fragment>
+      <Navbar />
+      <div className="container fade">
+        <section className="section">
+          {loading ? (
+            <Loader />
+          ) : (
             <div className="columns is-centered is-multiline">
               <div className="column is-two-thirds-desktop ">
                 <h1 className="title is-1 section-header">{title}</h1>
@@ -58,10 +46,10 @@ export default class Company extends Component {
                 </figure>
               </div>
             </div>
-          </section>
-        </div>
-        <Footer />
-      </Fragment>
-    );
-  }
-}
+          )}
+        </section>
+      </div>
+      <Footer />
+    </Fragment>
+  );
+};

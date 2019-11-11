@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './scss/index.scss';
-import App from './App';
+import MoonagePictures from './MoonagePictures';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<MoonagePictures />, document.getElementById('root'));
 
 serviceWorker.unregister();
