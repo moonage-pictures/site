@@ -1,17 +1,26 @@
 {
-  "main.css": "/static/css/main.d82ad90f.chunk.css",
-  "main.js": "/static/js/main.9b615b15.chunk.js",
-  "main.js.map": "/static/js/main.9b615b15.chunk.js.map",
-  "static/css/1.f37ee1a0.chunk.css": "/static/css/1.f37ee1a0.chunk.css",
-  "static/js/1.a3cd356a.chunk.js": "/static/js/1.a3cd356a.chunk.js",
-  "static/js/1.a3cd356a.chunk.js.map": "/static/js/1.a3cd356a.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/logo.svg": "/static/media/logo.a6bcd0cf.svg",
-  "static/media/index.scss": "/static/media/lulo-clean-one.bda4e77e.otf",
-  "static/css/main.d82ad90f.chunk.css.map": "/static/css/main.d82ad90f.chunk.css.map",
-  "static/css/1.f37ee1a0.chunk.css.map": "/static/css/1.f37ee1a0.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.39369a8378c09149a54a49983f8d1a65.js": "/precache-manifest.39369a8378c09149a54a49983f8d1a65.js",
-  "service-worker.js": "/service-worker.js"
+  "files": {
+    "main.css": "/static/css/main.569f39e4.chunk.css",
+    "main.js": "/static/js/main.29c88044.chunk.js",
+    "main.js.map": "/static/js/main.29c88044.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.840ac8e0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.840ac8e0.js.map",
+    "static/css/2.3e57c46c.chunk.css": "/static/css/2.3e57c46c.chunk.css",
+    "static/js/2.43d8e921.chunk.js": "/static/js/2.43d8e921.chunk.js",
+    "static/js/2.43d8e921.chunk.js.map": "/static/js/2.43d8e921.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.75b691632b2e775a725797e6ed697553.js": "/precache-manifest.75b691632b2e775a725797e6ed697553.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.3e57c46c.chunk.css.map": "/static/css/2.3e57c46c.chunk.css.map",
+    "static/css/main.569f39e4.chunk.css.map": "/static/css/main.569f39e4.chunk.css.map",
+    "static/media/logo.svg": "/static/media/logo.a6bcd0cf.svg",
+    "static/media/index.scss": "/static/media/lulo-clean-one.bda4e77e.otf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.840ac8e0.js",
+    "static/css/2.3e57c46c.chunk.css",
+    "static/js/2.43d8e921.chunk.js",
+    "static/css/main.569f39e4.chunk.css",
+    "static/js/main.29c88044.chunk.js"
+  ]
 }
