@@ -149,8 +149,6 @@ const MooneagePicturesContextProvider = ({ children }) => {
     contactData
   };
 
-  console.log("context is", context);
-
   return (
     <MoonagePicturesContext.Provider children={children} value={context} />
   );
