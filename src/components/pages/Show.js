@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useContext, useEffect } from "react";
 import {
   CarouselProvider,
   Slider,
@@ -7,175 +7,161 @@ import {
   ButtonNext
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import axios from "axios";
 
 import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
 import ReactPlayer from "react-player";
 import { Loader } from "../common/Loader";
+import { MoonagePicturesContext } from "../../MoonagePictures";
 
-export default ({location}) => {
-  const [show, setShow] = useState(null)
-  const [img, setImg] = useState(null)
-  const [playerLoaded, setPlayerLoaded] = useState(false)
+export default ({ location }) => {
+  const {
+    curfewData: { show, wideImages: initialWideImages, loading }
+  } = useContext(MoonagePicturesContext);
 
-  state = {
-    show: location.show || null,
-    img: location.img || null,
-    playerLoaded: false,
-    loading: true,
-    wideImages: []
-  };
+  const [wideImages, setWideImages] = useState([]);
+  const [playerLoaded, setPlayerLoaded] = useState(false);
 
-  componentDidMount = async () => {
-    window.scrollTo(0, 0);
-    if (this.state.show) this.getFirstSlide();
-    if (!this.state.show) await this.getShow();
+  useEffect(() => {
+    if (initialWideImages) setWideImages(initialWideImages);
+  }, [initialWideImages]);
 
-    this.setState({ loading: false });
-  };
+  useEffect(() => {
+    const getFirstSlide = () => {
+      const matchedImg = initialWideImages.find(
+        ({ description }) => description === location.img.description
+      );
 
-  getFirstSlide = () => {
-    let wideImages = this.state.show.acf.wideImages.slice();
-    const matchedImg = wideImages.find(
-      img => img.description === this.state.img.description
-    );
+      const startingImage = [...initialWideImages].splice(
+        initialWideImages.indexOf(matchedImg)
+      );
+      const newImageOrder = [
+        ...new Set([...startingImage, ...initialWideImages])
+      ];
 
-    const startingImage = wideImages.splice(wideImages.indexOf(matchedImg));
-    const newImageOrder = [...startingImage, ...wideImages];
+      setWideImages(newImageOrder);
+    };
 
-    this.setState({ wideImages: newImageOrder });
-  };
+    window.scroll(0, 0);
+    if (location.img) getFirstSlide();
+  }, [location, initialWideImages]);
 
-  getShow = async () => {
-    const { data: show } = await axios({
-      url: "https://cms.moonagepictures.com/wp-json/wp/v2/posts/488",
-      method: "GET"
-    });
-    this.setState({ show, wideImages: show.acf.wideImages });
-  };
+  const successState = () => setPlayerLoaded(true);
 
-  successState = () => this.setState({ playerLoaded: true });
-
-  render() {
-    const { show, playerLoaded, loading } = this.state;
-    return (
-      <Fragment>
-        <Navbar />
-        <div className="container fade">
-          <section className="section">
-            {loading ? (
-              <Loader />
-            ) : (
-              <Fragment>
-                <div className="columns is-centered">
-                  <div className="column is-three-quarters">
-                    <CarouselProvider
-                      naturalSlideWidth={16}
-                      naturalSlideHeight={9}
-                      totalSlides={show.acf.wideImages.length}
-                      interval={10000}
-                      isPlaying={true}
-                    >
-                      <div className="columns is-vcentered is-full">
-                        {window.innerWidth > 768 && (
-                          <div className="column is-narrow">
-                            <ButtonBack className="arrow-left" />
-                          </div>
-                        )}
-                        <div className="column">
-                          <Slider>
-                            {this.state.wideImages.map((img, i) => (
-                              <Slide index={i} key={i}>
-                                <figure
-                                  className="image is-16by9"
-                                >
-                                  <img src={img.url} alt={img.alt} />
-                                </figure>
-                              </Slide>
-                            ))}
-                          </Slider>
+  return (
+    <Fragment>
+      <Navbar />
+      <div className="container fade">
+        <section className="section">
+          {loading ? (
+            <Loader />
+          ) : (
+            <Fragment>
+              <div className="columns is-centered">
+                <div className="column is-three-quarters">
+                  <CarouselProvider
+                    naturalSlideWidth={16}
+                    naturalSlideHeight={9}
+                    totalSlides={show.acf.wideImages.length}
+                    interval={10000}
+                    isPlaying={true}
+                  >
+                    <div className="columns is-vcentered is-full">
+                      {window.innerWidth > 768 && (
+                        <div className="column is-narrow">
+                          <ButtonBack className="arrow-left" />
                         </div>
-
-                        {window.innerWidth < 769 && (
-                          <div className=" mobile-arrows">
-                            <ButtonBack className="arrow-left" />
-                            <ButtonNext className="arrow-right" />
-                          </div>
-                        )}
-
-                        {window.innerWidth > 768 && (
-                          <div className="column is-narrow">
-                            <ButtonNext className="arrow-right" />
-                          </div>
-                        )}
+                      )}
+                      <div className="column">
+                        <Slider>
+                          {wideImages.map((img, i) => (
+                            <Slide index={i} key={i}>
+                              <figure className="image is-16by9">
+                                <img src={img.url} alt={img.alt} />
+                              </figure>
+                            </Slide>
+                          ))}
+                        </Slider>
                       </div>
-                    </CarouselProvider>
-                  </div>
-                </div>
-                <div className="columns is-centered is-multiline">
-                  <div className="column is-two-thirds-desktop">
-                    <div style={{ display: "flex", justifyContent: "center" }}>
-                      <figure
-                        className="image"
-                        style={{ marginTop: "2rem", width: "65%" }}
-                      >
-                        <img
-                          src={show.acf.bannerImage.url}
-                          alt={`${show.title.rendered} screenshot`}
-                        />
-                      </figure>
+
+                      {window.innerWidth < 769 && (
+                        <div className=" mobile-arrows">
+                          <ButtonBack className="arrow-left" />
+                          <ButtonNext className="arrow-right" />
+                        </div>
+                      )}
+
+                      {window.innerWidth > 768 && (
+                        <div className="column is-narrow">
+                          <ButtonNext className="arrow-right" />
+                        </div>
+                      )}
                     </div>
+                  </CarouselProvider>
+                </div>
+              </div>
+              <div className="columns is-centered is-multiline">
+                <div className="column is-two-thirds-desktop">
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <figure
+                      className="image"
+                      style={{ marginTop: "2rem", width: "65%" }}
+                    >
+                      <img
+                        src={show.acf.bannerImage.url}
+                        alt={`${show.title.rendered} screenshot`}
+                      />
+                    </figure>
                   </div>
                 </div>
-                <div className="columns is-centered is-multiline">
-                  <div className="column is-two-thirds-desktop ">
-                    <div
-                      className="page-content"
-                      dangerouslySetInnerHTML={{
-                        __html: show.content.rendered
-                      }}
-                    />
-                  </div>
-                  <div className="column is-two-thirds-desktop is-full-mobile is-full-tablet">
-                    {window.innerWidth >= 1024 ? (
-                      <div>
-                        {!playerLoaded && (
-                          <Loader
-                            section="trailer"
-                            style={{ margin: "0 auto" }}
-                          />
-                        )}{" "}
-                        <div className="fade">
-                          <ReactPlayer
-                            url={show.acf.trailerUrl}
-                            onReady={this.successState}
-                            controls
-                            width="100%"
-                          />
-                        </div>
+              </div>
+              <div className="columns is-centered is-multiline">
+                <div className="column is-two-thirds-desktop ">
+                  <div
+                    className="page-content"
+                    dangerouslySetInnerHTML={{
+                      __html: show.content.rendered
+                    }}
+                  />
+                </div>
+                <div className="column is-two-thirds-desktop is-full-mobile is-full-tablet">
+                  {window.innerWidth >= 1024 ? (
+                    <div>
+                      {!playerLoaded && (
+                        <Loader
+                          section="trailer"
+                          style={{ margin: "0 auto" }}
+                        />
+                      )}{" "}
+                      <div className="fade">
+                        <ReactPlayer
+                          url={show.acf.trailerUrl}
+                          onReady={successState}
+                          controls
+                          width="100%"
+                        />
                       </div>
-                    ) : (
-                      <Fragment>
-                        {!playerLoaded && <Loader section="trailer" />}{" "}
-                        <div className="fade">
-                          <ReactPlayer
-                            url={show.acf.trailerUrl}
-                            width="100%"
-                            onReady={this.successState}
-                            controls
-                          />
-                        </div>
-                      </Fragment>
-                    )}
-                  </div>
+                    </div>
+                  ) : (
+                    <Fragment>
+                      {!playerLoaded && <Loader section="trailer" />}{" "}
+                      <div className="fade">
+                        <ReactPlayer
+                          url={show.acf.trailerUrl}
+                          width="100%"
+                          onReady={successState}
+                          controls
+                        />
+                      </div>
+                    </Fragment>
+                  )}
                 </div>
-              </Fragment>
-            )}
-          </section>
-        </div>
-        <Footer />
-      </Fragment>
-    );
-  }
-}
+              </div>
+            </Fragment>
+          )}
+        </section>
+      </div>
+      <Footer />
+    </Fragment>
+  );
+};

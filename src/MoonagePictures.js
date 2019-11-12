@@ -11,6 +11,10 @@ const MooneagePicturesContextProvider = ({ children }) => {
   const [companyData, setCompanyData] = useState({ loading: true });
   const [newsData, setNewsData] = useState({ loading: true });
   const [showsData, setShowsData] = useState({ loading: true });
+  const [curfewData, setCurfewData] = useState({ loading: true });
+  const [peopleData, setPeopleData] = useState({ loading: true });
+  const [daydreamData, setDaydreamData] = useState({ loading: true });
+  const [contactData, setContactData] = useState({loading: true})
 
   useEffect(() => {
     const fetchCompanyData = async () => {
@@ -77,9 +81,73 @@ const MooneagePicturesContextProvider = ({ children }) => {
     };
 
     fetchShowsData();
-  });
+  }, []);
 
-  const context = { companyData, newsData, showsData };
+  useEffect(() => {
+    const fetchCurfewData = async () => {
+      const { data: show } = await axios({
+        url: "https://cms.moonagepictures.com/wp-json/wp/v2/posts/488",
+        method: "GET"
+      });
+      setCurfewData({ show, wideImages: show.acf.wideImages, loading: false });
+    };
+    fetchCurfewData();
+  }, []);
+
+  useEffect(() => {
+    const fetchPeopleData = async () => {
+      const { data } = await axios({
+        url: "https://cms.moonagepictures.com/wp-json/wp/v2/pages/497",
+        method: "GET"
+      });
+      setPeopleData({
+        title: data.title.rendered,
+        body: data.content.rendered,
+        loading: false
+      });
+    };
+    fetchPeopleData();
+  }, []);
+
+  useEffect(() => {
+    const fetchDaydreamData = async () => {
+      const { data } = await axios({
+        url: "https://cms.moonagepictures.com/wp-json/wp/v2/pages/160",
+        method: "GET"
+      });
+      setDaydreamData({
+        title: data.title.rendered,
+        body: data.content.rendered,
+        loading: false
+      });
+    };
+    fetchDaydreamData();
+  }, []);
+
+  useEffect(() => {
+    const fetchContactData = async () => {
+      const { data } = await axios.get(
+        "https://cms.moonagepictures.com/wp-json/wp/v2/pages/19"
+      );
+      setContactData({
+        title: data.title.rendered,
+        contactInfo: { ...data.acf },
+        body: data.content.rendered,
+        loading: false
+      });
+    }
+    fetchContactData()
+  }, [])
+
+  const context = {
+    companyData,
+    newsData,
+    showsData,
+    curfewData,
+    peopleData,
+    daydreamData,
+    contactData
+  };
 
   console.log("context is", context);
 
