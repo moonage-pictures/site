@@ -63,16 +63,8 @@ export default class Footer extends Component {
             className="column is-half is-offset-one-quarter"style={{marginTop: 0, paddingTop: 0}}
           >
             <p style={{fontSize: ".75rem", margin: 0, padding: 0, textAlign: 'center'}}>
-              Copyright Moonage Pictures Limited&#169; {moment().format("YYYY")}. <Link to="/privacy-policy" style={{color: "white"}}>Privacy Policy</Link> <br />
-              Designed by{" "}
-              <a
-                href="http://richardtzanov.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{color: "white"}}
-              >
-                richardtzanov.com
-              </a>
+              Copyright Moonage Pictures Limited&#169; {moment().format("YYYY")}. <Link to="/privacy-policy" style={{color: "white"}}>Privacy Policy</Link>
+             
             </p>
           </div>
         </div>
