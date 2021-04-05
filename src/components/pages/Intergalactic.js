@@ -17,7 +17,7 @@ const Intergalactic = () => {
 
   const [playerLoaded, setPlayerLoaded] = useState(false);
 
-  const successState = () => setPlayerLoaded(true)
+  const successState = () => setPlayerLoaded(true);
 
   return (
     <Fragment>
@@ -43,35 +43,39 @@ const Intergalactic = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="column is-two-thirds-desktop is-full-mobile is-full-tablet">
-                {window.innerWidth >= 1024 ? (
-                  <div>
-                    {!playerLoaded && (
-                      <Loader section="trailer" style={{ margin: "0 auto" }} />
-                    )}{" "}
-                    <div className="fade">
-                      <ReactPlayer
-                        url={show.acf.trailerUrl}
-                        onReady={successState}
-                        controls
-                        width="100%"
-                      />
+              <div className="columns is-centered is-multiline">
+                <div className="column is-two-thirds-desktop is-full-mobile is-full-tablet">
+                  {window.innerWidth >= 1024 ? (
+                    <div>
+                      {!playerLoaded && (
+                        <Loader
+                          section="trailer"
+                          style={{ margin: "0 auto" }}
+                        />
+                      )}{" "}
+                      <div className="fade">
+                        <ReactPlayer
+                          url={show.acf.trailer_url}
+                          onReady={successState}
+                          controls
+                          width="100%"
+                        />
+                      </div>
                     </div>
-                  </div>
-                ) : (
-                  <Fragment>
-                    {!playerLoaded && <Loader section="trailer" />}{" "}
-                    <div className="fade">
-                      <ReactPlayer
-                        url={show.acf.trailerUrl}
-                        width="100%"
-                        onReady={successState}
-                        controls
-                      />
-                    </div>
-                  </Fragment>
-                )}
+                  ) : (
+                    <Fragment>
+                      {!playerLoaded && <Loader section="trailer" />}{" "}
+                      <div className="fade">
+                        <ReactPlayer
+                          url={show.acf.trailer_url}
+                          width="100%"
+                          onReady={successState}
+                          controls
+                        />
+                      </div>
+                    </Fragment>
+                  )}
+                </div>
               </div>
               <div className="columns is-centered is-multiline">
                 <div className="column is-two-thirds-desktop ">
@@ -92,4 +96,4 @@ const Intergalactic = () => {
   );
 };
 
-export default Intergalactic
+export default Intergalactic;
