@@ -180,10 +180,12 @@ const MooneagePicturesContextProvider = ({ children }) => {
   );
 };
 
-export default () => {
+const MoonagePictures = () => {
   return (
     <MooneagePicturesContextProvider>
       <Routes />
     </MooneagePicturesContextProvider>
   );
 };
+
+export default MoonagePictures

@@ -6,7 +6,7 @@ import ReactPlayer from "react-player";
 import { Loader } from "../common/Loader";
 import { MoonagePicturesContext } from "../../MoonagePictures";
 
-export default () => {
+const Intergalactic = () => {
   const {
     intergalacticData: { show, loading },
   } = useContext(MoonagePicturesContext);
@@ -91,3 +91,5 @@ export default () => {
     </Fragment>
   );
 };
+
+export default Intergalactic

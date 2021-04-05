@@ -5,7 +5,7 @@ import Footer from "../common/Footer";
 import { Loader } from "../common/Loader";
 import { MoonagePicturesContext } from "../../MoonagePictures";
 
-export default () => {
+const PursuitOfLove = () => {
   const {
     pursuitOfLoveData: { show, loading },
   } = useContext(MoonagePicturesContext);
@@ -46,3 +46,5 @@ export default () => {
     </Fragment>
   );
 };
+
+export default PursuitOfLove

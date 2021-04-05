@@ -13,7 +13,7 @@ import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import Intergalactic from "./components/pages/Intergalactic";
 import PursuitOfLove from "./components/pages/PursuitOfLove";
 
-export default () => {
+const Routes = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Fragment>
@@ -34,3 +34,5 @@ export default () => {
     </BrowserRouter>
   );
 };
+
+export default Routes

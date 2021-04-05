@@ -14,7 +14,7 @@ import ReactPlayer from "react-player";
 import { Loader } from "../common/Loader";
 import { MoonagePicturesContext } from "../../MoonagePictures";
 
-export default ({ location }) => {
+const Curfew = ({ location }) => {
   const {
     curfewData: { show, wideImages: initialWideImages, loading }
   } = useContext(MoonagePicturesContext);
@@ -165,3 +165,5 @@ export default ({ location }) => {
     </Fragment>
   );
 };
+
+export default Curfew

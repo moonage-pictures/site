@@ -5,7 +5,7 @@ import Footer from "../common/Footer";
 import { Loader } from "../common/Loader";
 import { MoonagePicturesContext } from "../../MoonagePictures";
 
-export default () => {
+const Shows = () => {
   const {
     showsData: { shows, loading }
   } = useContext(MoonagePicturesContext);
@@ -55,3 +55,5 @@ export default () => {
     </Fragment>
   );
 };
+
+export default Shows

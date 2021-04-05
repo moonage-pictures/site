@@ -4,7 +4,7 @@ import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
 import { Loader } from "../common/Loader";
 
-export default () => {
+const Company = () => {
   const {
     companyData: { loading, title, body, companyImage }
   } = useContext(MoonagePicturesContext);
@@ -53,3 +53,5 @@ export default () => {
     </Fragment>
   );
 };
+
+export default Company
