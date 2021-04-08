@@ -101,7 +101,7 @@ const MooneagePicturesContextProvider = ({ children }) => {
       const { data: show } = await axios.get(
         "https://cms.moonagepictures.com/wp-json/wp/v2/posts/1600"
       );
-      setIntergalacticData({ show, loading: false });
+      setIntergalacticData({ show, wideImages: show.acf.wideImages, loading: false });
     };
 
     fetchIntergalacticData();
@@ -112,7 +112,7 @@ const MooneagePicturesContextProvider = ({ children }) => {
       const { data: show } = await axios.get(
         "https://cms.moonagepictures.com/wp-json/wp/v2/posts/1614"
       );
-      setPursuitOfLoveData({ show, loading: false });
+      setPursuitOfLoveData({ show, wideImages: show.acf.wideImages,  loading: false });
     };
 
     fetchPursuitOfLoveData();

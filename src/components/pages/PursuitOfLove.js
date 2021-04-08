@@ -1,13 +1,11 @@
 import React, { useContext, useEffect, Fragment } from "react";
 
-import Navbar from "../common/Navbar";
-import Footer from "../common/Footer";
-import { Loader } from "../common/Loader";
+import Show from "../common/Show"
 import { MoonagePicturesContext } from "../../MoonagePictures";
 
 const PursuitOfLove = () => {
   const {
-    pursuitOfLoveData: { show, loading },
+    pursuitOfLoveData: { show, loading, wideImages },
   } = useContext(MoonagePicturesContext);
 
   useEffect(() => {
@@ -15,35 +13,7 @@ const PursuitOfLove = () => {
   }, []);
 
   return (
-    <Fragment>
-      <Navbar />
-      <div className="container fade">
-        <section className="section">
-          {loading ? (
-            <Loader />
-          ) : (
-            <Fragment>
-              <div className="columns is-centered">
-                <div className="column is-two-thirds-desktop ">
-                  <h1 className="title is-1">{show.title.rendered}</h1>
-                </div>
-              </div>
-              <div className="columns is-centered is-multiline">
-                <div className="column is-two-thirds-desktop ">
-                  <div
-                    className="page-content"
-                    dangerouslySetInnerHTML={{
-                      __html: show.content.rendered,
-                    }}
-                  />
-                </div>
-              </div>
-            </Fragment>
-          )}
-        </section>
-      </div>
-      <Footer />
-    </Fragment>
+   <Show show={show} wideImages={wideImages} loading={loading} />
   );
 };
 
