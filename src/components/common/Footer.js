@@ -7,17 +7,24 @@ import moment from "moment";
 import {
   faFacebook,
   faInstagram,
-  faTwitter
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
 export default class Footer extends Component {
-
   render() {
     return (
-      <footer style={window.location.pathname === '/' || window.innerWidth < 1024 ? {position: "static"} :  {position: "fixed"}}>
+      <footer
+        style={
+          window.location.pathname === "/" || window.innerWidth < 1024
+            ? { position: "static" }
+            : { position: "fixed" }
+        }
+      >
         <div className="columns">
-          <div className="column is-half is-offset-one-quarter" style={{padding: "0.75rem 0 0 0"}}>
-            <div className="footer-content">
+          <div
+            className="column is-half is-offset-one-quarter"
+          >
+            <div className="footer-content" style={{marginTop: `.75rem`}}>
               <a
                 href="https://www.facebook.com/MoonagePics/"
                 target="_blank"
@@ -25,9 +32,9 @@ export default class Footer extends Component {
               >
                 <FontAwesomeIcon
                   icon={faFacebook}
-                  size={"4x"}
+                  size={"lg"}
                   color="white"
-                  style={{ paddingRight: "2rem", marginLeft: "2rem" }}
+                  style={{ marginRight: "1.5rem" }}
                 />
               </a>
               <a
@@ -37,9 +44,9 @@ export default class Footer extends Component {
               >
                 <FontAwesomeIcon
                   icon={faTwitter}
-                  size={"4x"}
+                  size={"lg"}
                   color="white"
-                  style={{ paddingRight: "2rem" }}
+                  style={{ marginRight: "1.5rem" }}
                 />
               </a>
               <a
@@ -49,9 +56,9 @@ export default class Footer extends Component {
               >
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  size={"4x"}
+                  size={"lg"}
                   color="white"
-                  style={{ paddingRight: "2rem" }}
+                  style={{ marginRight: "1.5rem" }}
                 />
               </a>
             </div>
@@ -60,15 +67,25 @@ export default class Footer extends Component {
 
         <div className="columns">
           <div
-            className="column is-half is-offset-one-quarter"style={{marginTop: 0, paddingTop: 0}}
+            className="column is-half is-offset-one-quarter"
+            style={{ marginTop: 0, paddingTop: 0 }}
           >
-            <p style={{fontSize: ".75rem", margin: 0, padding: 0, textAlign: 'center'}}>
-              Copyright Moonage Pictures Limited&#169; {moment().format("YYYY")}. <Link to="/privacy-policy" style={{color: "white"}}>Privacy Policy</Link>
-             
+            <p
+              style={{
+                fontSize: ".65rem",
+                margin: 0,
+                padding: 0,
+                textAlign: "center",
+              }}
+            >
+              Copyright Moonage Pictures Limited &#169;{" "}
+              {moment().format("YYYY")}.{" "}
+              <Link to="/privacy-policy" style={{ color: "white" }}>
+                Privacy Policy
+              </Link>
             </p>
           </div>
         </div>
-        
       </footer>
     );
   }
