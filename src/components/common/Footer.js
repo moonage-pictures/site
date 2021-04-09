@@ -56,7 +56,6 @@ export default class Footer extends Component {
                   icon={faInstagram}
                   size={"lg"}
                   color="white"
-                  style={{ marginRight: "1.5rem" }}
                 />
               </a>
             </div>
