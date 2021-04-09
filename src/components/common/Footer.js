@@ -21,10 +21,8 @@ export default class Footer extends Component {
         }
       >
         <div className="columns">
-          <div
-            className="column is-half is-offset-one-quarter"
-          >
-            <div className="footer-content" style={{marginTop: `.75rem`}}>
+          <div className="column is-half is-offset-one-quarter">
+            <div className="footer-content" style={{ marginTop: `.75rem` }}>
               <a
                 href="https://www.facebook.com/MoonagePics/"
                 target="_blank"
@@ -84,6 +82,21 @@ export default class Footer extends Component {
                 Privacy Policy
               </Link>
             </p>
+            {window.location.pathname === `/` && (
+              <p
+                style={{
+                  fontSize: ".65rem",
+                  margin: 0,
+                  padding: 0,
+                  textAlign: "center",
+                }}
+              >
+                Designed by{" "}
+                <a style={{ color: "white" }} href="http://richardtzanov.com">
+                  richardtzanov.com
+                </a>
+              </p>
+            )}
           </div>
         </div>
       </footer>
