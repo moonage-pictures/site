@@ -5,7 +5,7 @@ import Footer from "../common/Footer";
 import { Loader } from "../common/Loader";
 import { MoonagePicturesContext } from "../../MoonagePictures";
 
-export default () => {
+const Shows = () => {
   const {
     showsData: { shows, loading }
   } = useContext(MoonagePicturesContext);
@@ -27,10 +27,10 @@ export default () => {
                 <div className="columns is-multiline is-centered is-mobile">
                   {show.acf.squareImages.map((img, i) => (
                     <Fragment key={i}>
-                      <div className="column is-one-quarter-desktop is-half-mobile is-one-quarter-tablet">
+                      <div className="column is-one-fifth-desktop is-half-mobile is-one-fifth-tablet">
                         <Link
                           to={{
-                            pathname: `shows/${show.slug}`,
+                            pathname: `shows/${img.description}`,
                             show,
                             img
                           }}
@@ -55,3 +55,5 @@ export default () => {
     </Fragment>
   );
 };
+
+export default Shows

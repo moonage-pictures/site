@@ -5,7 +5,7 @@ import { Loader } from "../common/Loader";
 import GoogleMap from "../common/GoogleMap";
 import { MoonagePicturesContext } from "../../MoonagePictures";
 
-export default () => {
+const Contact = () => {
   const {
     contactData: { loading, title, body, contactInfo }
   } = useContext(MoonagePicturesContext);
@@ -82,3 +82,5 @@ export default () => {
     </Fragment>
   );
 };
+
+export default Contact

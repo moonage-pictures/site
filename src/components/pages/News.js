@@ -6,7 +6,7 @@ import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
 import { Loader } from "../common/Loader";
 
-export default () => {
+const News = () => {
   const {
     newsData: { loading, title, pressReleases }
   } = useContext(MoonagePicturesContext);
@@ -79,3 +79,5 @@ export default () => {
     </Fragment>
   );
 };
+
+export default News
