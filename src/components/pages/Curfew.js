@@ -4,7 +4,7 @@ import Show from "../common/Show";
 import { MoonagePicturesContext } from "../../MoonagePictures";
 import getImageOrder from "./utils/getImageOrder";
 
-const Curfew = ({ location }) => {
+const Curfew = ({ location: { img } }) => {
   const {
     curfewData: { show, wideImages: initialWideImages, loading },
   } = useContext(MoonagePicturesContext);
@@ -17,10 +17,10 @@ const Curfew = ({ location }) => {
 
   useEffect(() => {
     window.scroll(0, 0);
-    if (location.img) {
-      setWideImages(getImageOrder(initialWideImages, location));
+    if (img) {
+      setWideImages(getImageOrder(initialWideImages, img));
     }
-  }, [location, initialWideImages]);
+  }, [img, initialWideImages]);
 
   return <Show show={show} wideImages={wideImages} loading={loading} />;
 };

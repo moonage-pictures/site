@@ -1,6 +1,6 @@
-const getImageOrder = (initialWideImages, location) => {
+const getImageOrder = (initialWideImages, img) => {
   const matchedImg = initialWideImages.find(
-    ({ title }) => title === location.img.title
+    ({ title }) => title === img.title
   );
 
   const startingImage = [...initialWideImages].splice(
