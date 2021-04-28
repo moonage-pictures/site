@@ -99,7 +99,10 @@ const Show = ({ show, wideImages, loading }) => {
                   />
                 </div>
                 {show.acf.trailerUrl && (
-                  <div className="column is-two-thirds-desktop is-full-mobile is-full-tablet">
+                  <div
+                    className="column is-two-thirds-desktop is-full-mobile is-full-tablet"
+                    style={{ marginBottom: window.innerWidth >= 1024 ?`10rem` : `1rem` }}
+                  >
                     {window.innerWidth >= 1024 ? (
                       <div>
                         {!playerLoaded && (
