@@ -1,10 +1,10 @@
-import React, { useState, Fragment, useContext, useEffect } from "react";
+import React, { useState, Fragment } from "react";
 import {
   CarouselProvider,
   Slider,
   Slide,
   ButtonBack,
-  ButtonNext
+  ButtonNext,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
@@ -12,39 +12,9 @@ import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
 import ReactPlayer from "react-player";
 import { Loader } from "../common/Loader";
-import { MoonagePicturesContext } from "../../MoonagePictures";
 
-export default ({ location }) => {
-  const {
-    curfewData: { show, wideImages: initialWideImages, loading }
-  } = useContext(MoonagePicturesContext);
-
-  const [wideImages, setWideImages] = useState([]);
+const Show = ({ show, wideImages, loading }) => {
   const [playerLoaded, setPlayerLoaded] = useState(false);
-
-  useEffect(() => {
-    if (initialWideImages) setWideImages(initialWideImages);
-  }, [initialWideImages]);
-
-  useEffect(() => {
-    const getFirstSlide = () => {
-      const matchedImg = initialWideImages.find(
-        ({ description }) => description === location.img.description
-      );
-
-      const startingImage = [...initialWideImages].splice(
-        initialWideImages.indexOf(matchedImg)
-      );
-      const newImageOrder = [
-        ...new Set([...startingImage, ...initialWideImages])
-      ];
-
-      setWideImages(newImageOrder);
-    };
-
-    window.scroll(0, 0);
-    if (location.img) getFirstSlide();
-  }, [location, initialWideImages]);
 
   const successState = () => setPlayerLoaded(true);
 
@@ -63,7 +33,7 @@ export default ({ location }) => {
                     naturalSlideWidth={16}
                     naturalSlideHeight={9}
                     totalSlides={show.acf.wideImages.length}
-                    interval={10000}
+                    interval={5000}
                     isPlaying={true}
                   >
                     <div className="columns is-vcentered is-full">
@@ -103,15 +73,19 @@ export default ({ location }) => {
               <div className="columns is-centered is-multiline">
                 <div className="column is-two-thirds-desktop">
                   <div style={{ display: "flex", justifyContent: "center" }}>
-                    <figure
-                      className="image"
-                      style={{ marginTop: "2rem", width: "65%" }}
-                    >
-                      <img
-                        src={show.acf.bannerImage.url}
-                        alt={`${show.title.rendered} screenshot`}
-                      />
-                    </figure>
+                    {show.acf.bannerImage.url ? (
+                      <figure
+                        className="image"
+                        style={{ marginTop: "2rem", width: "65%" }}
+                      >
+                        <img
+                          src={show.acf.bannerImage.url}
+                          alt={`${show.title.rendered} screenshot`}
+                        />
+                      </figure>
+                    ) : (
+                      <h1 className="title is-1">{show.title.rendered}</h1>
+                    )}
                   </div>
                 </div>
               </div>
@@ -120,42 +94,47 @@ export default ({ location }) => {
                   <div
                     className="page-content"
                     dangerouslySetInnerHTML={{
-                      __html: show.content.rendered
+                      __html: show.content.rendered,
                     }}
                   />
                 </div>
-                <div className="column is-two-thirds-desktop is-full-mobile is-full-tablet">
-                  {window.innerWidth >= 1024 ? (
-                    <div>
-                      {!playerLoaded && (
-                        <Loader
-                          section="trailer"
-                          style={{ margin: "0 auto" }}
-                        />
-                      )}{" "}
-                      <div className="fade">
-                        <ReactPlayer
-                          url={show.acf.trailerUrl}
-                          onReady={successState}
-                          controls
-                          width="100%"
-                        />
+                {show.acf.trailerUrl && (
+                  <div
+                    className="column is-two-thirds-desktop is-full-mobile is-full-tablet"
+                    style={{ marginBottom: window.innerWidth >= 1024 ?`10rem` : `1rem` }}
+                  >
+                    {window.innerWidth >= 1024 ? (
+                      <div>
+                        {!playerLoaded && (
+                          <Loader
+                            section="trailer"
+                            style={{ margin: "0 auto" }}
+                          />
+                        )}{" "}
+                        <div className="fade">
+                          <ReactPlayer
+                            url={show.acf.trailerUrl}
+                            onReady={successState}
+                            controls
+                            width="100%"
+                          />
+                        </div>
                       </div>
-                    </div>
-                  ) : (
-                    <Fragment>
-                      {!playerLoaded && <Loader section="trailer" />}{" "}
-                      <div className="fade">
-                        <ReactPlayer
-                          url={show.acf.trailerUrl}
-                          width="100%"
-                          onReady={successState}
-                          controls
-                        />
-                      </div>
-                    </Fragment>
-                  )}
-                </div>
+                    ) : (
+                      <Fragment>
+                        {!playerLoaded && <Loader section="trailer" />}{" "}
+                        <div className="fade">
+                          <ReactPlayer
+                            url={show.acf.trailerUrl}
+                            width="100%"
+                            onReady={successState}
+                            controls
+                          />
+                        </div>
+                      </Fragment>
+                    )}
+                  </div>
+                )}
               </div>
             </Fragment>
           )}
@@ -165,3 +144,5 @@ export default ({ location }) => {
     </Fragment>
   );
 };
+
+export default Show;

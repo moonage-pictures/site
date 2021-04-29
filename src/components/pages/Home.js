@@ -5,6 +5,7 @@ import logo from "../../assets/images/logo.svg";
 
 export default class Home extends Component {
   render() {
+    console.log('designed by richardtzanov.com')
     return (
       <Fragment>
         <div className="home-wrapper">

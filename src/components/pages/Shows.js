@@ -1,18 +1,26 @@
-import React, { useEffect, useContext, Fragment } from "react";
+import React, { useEffect, useContext, Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
 import { Loader } from "../common/Loader";
 import { MoonagePicturesContext } from "../../MoonagePictures";
+import { NUMBER_OF_IMAGES } from "../../constants";
 
-export default () => {
+const Shows = () => {
   const {
-    showsData: { shows, loading }
+    showsData: { shows, loading },
   } = useContext(MoonagePicturesContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [imagesLoaded, setImagesLoaded] = useState(0);
+  const [displayImages, setDisplayImages] = useState(false);
+
+  useEffect(() => {
+    if (imagesLoaded === NUMBER_OF_IMAGES) setDisplayImages(true);
+  }, [imagesLoaded]);
 
   return (
     <Fragment>
@@ -22,24 +30,33 @@ export default () => {
           {loading ? (
             <Loader />
           ) : (
-            shows.map(show => (
+            shows.map((show) => (
               <Fragment key={show.id}>
+                {!displayImages && <Loader />}
                 <div className="columns is-multiline is-centered is-mobile">
                   {show.acf.squareImages.map((img, i) => (
                     <Fragment key={i}>
-                      <div className="column is-one-quarter-desktop is-half-mobile is-one-quarter-tablet">
+                      <div
+                        className={`column is-one-fifth-desktop is-half-mobile is-one-fifth-tablet fade ${
+                          displayImages ? "" : `is-hidden`
+                        }`}
+                      >
                         <Link
                           to={{
-                            pathname: `shows/${show.slug}`,
+                            pathname: `shows/${img.description}`,
                             show,
-                            img
+                            img,
                           }}
                         >
                           <figure
                             className="image is-1by1"
                             style={{ cursor: "pointer" }}
                           >
-                            <img src={img.url} alt={img.alt} />
+                            <img
+                              onLoad={() => setImagesLoaded(imagesLoaded + 1)}
+                              src={img.url}
+                              alt={img.alt}
+                            />
                           </figure>
                         </Link>
                       </div>
@@ -55,3 +72,5 @@ export default () => {
     </Fragment>
   );
 };
+
+export default Shows;
