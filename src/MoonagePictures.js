@@ -16,6 +16,10 @@ const MooneagePicturesContextProvider = ({ children }) => {
   const [pursuitOfLoveData, setPursuitOfLoveData] = useState({ loading: true });
   const [peopleData, setPeopleData] = useState({ loading: true });
   const [daydreamData, setDaydreamData] = useState({ loading: true });
+<<<<<<< HEAD
+=======
+  const [obsessionData, setObsessionData] = useState({ loading: true });
+>>>>>>> obsession
   const [contactData, setContactData] = useState({ loading: true });
 
   useEffect(() => {
@@ -71,13 +75,15 @@ const MooneagePicturesContextProvider = ({ children }) => {
       ] = await Promise.all([
         axios({
           url:
-            "https://cms.moonagepictures.com/wp-json/wp/v2/posts?categories=9",
+            process.env.REACT_APP_SHOWS_GALLERY_URL,
           method: "GET",
         }),
         await axios.get(
           "https://cms.moonagepictures.com/wp-json/wp/v2/pages/162"
         ),
       ]);
+
+      console.log('shows are', shows)
 
       setShowsData({ shows, title, loading: false });
     };
@@ -119,6 +125,21 @@ const MooneagePicturesContextProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
+<<<<<<< HEAD
+=======
+    const fetchObsessionData = async () => {
+      const { data: show } = await axios.get(
+        "https://cms.moonagepictures.com/wp-json/wp/v2/posts/1963"
+      );
+      console.log({show});
+      setObsessionData({ show, wideImages: show.acf.wideImages,  loading: false });
+    };
+
+    fetchObsessionData();
+  }, []);
+
+  useEffect(() => {
+>>>>>>> obsession
     const fetchPeopleData = async () => {
       const { data } = await axios({
         url: "https://cms.moonagepictures.com/wp-json/wp/v2/pages/497",
@@ -170,6 +191,10 @@ const MooneagePicturesContextProvider = ({ children }) => {
     curfewData,
     intergalacticData,
     pursuitOfLoveData,
+<<<<<<< HEAD
+=======
+    obsessionData,
+>>>>>>> obsession
     peopleData,
     daydreamData,
     contactData,
