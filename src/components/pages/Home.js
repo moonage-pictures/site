@@ -5,7 +5,6 @@ import logo from "../../assets/images/logo.svg";
 
 export default class Home extends Component {
   render() {
-    console.log('designed by richardtzanov.com')
     return (
       <Fragment>
         <div className="home-wrapper">
@@ -37,7 +36,11 @@ export default class Home extends Component {
           </Link>
           <Link to="/daydream">
             <div className="circle yellow daydream">
-              <h1 className="inner-circle">Day<br />Dream</h1>
+              <h1 className="inner-circle">
+                Day
+                <br />
+                Dream
+              </h1>
             </div>
           </Link>
 

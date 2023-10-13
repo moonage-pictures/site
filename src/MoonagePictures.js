@@ -47,7 +47,7 @@ const MooneagePicturesContextProvider = ({ children }) => {
         },
       ] = await Promise.all([
         axios({
-          url: "https://cms.moonagepictures.com/wp-json/wp/v2/posts?categories=5",
+          url: "https://cms.moonagepictures.com/wp-json/wp/v2/posts?categories=5&per_page=100",
           method: "GET",
         }),
         await axios.get(
@@ -147,7 +147,6 @@ const MooneagePicturesContextProvider = ({ children }) => {
         "https://cms.moonagepictures.com/wp-json/wp/v2/posts/2106"
       );
 
-      console.log({ show });
       setBodiesData({
         show,
         wideImages: show.acf.wideImages,
