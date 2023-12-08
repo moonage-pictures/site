@@ -14,6 +14,7 @@ import Intergalactic from "./components/pages/Intergalactic";
 import PursuitOfLove from "./components/pages/PursuitOfLove";
 import Obsession from "./components/pages/Obsession";
 import Bodies from "./components/pages/Bodies";
+import FamousFive from "./components/pages/FamousFive";
 
 const Routes = () => {
   return (
@@ -28,6 +29,7 @@ const Routes = () => {
           <Route path="/shows/the-pursuit-of-love" component={PursuitOfLove} />
           <Route path="/shows/obsession" component={Obsession} />
           <Route path="/shows/bodies" component={Bodies} />
+          <Route path="/shows/famous-five" component={FamousFive} />
           <Route path="/shows" component={Shows} />
           <Route path="/people" component={People} />
           <Route path="/daydream" component={Daydream} />
