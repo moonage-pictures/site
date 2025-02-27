@@ -24,6 +24,9 @@ const MooneagePicturesContextProvider = ({ children }) => {
   const [mysteryProspectHotelData, setMysteryProspectHotelData] = useState({
     loading: true,
   });
+  const [theLeopardData, setTheLeopardData] = useState({
+    loading: true,
+  });
   const [contactData, setContactData] = useState({ loading: true });
 
   useEffect(() => {
@@ -228,6 +231,22 @@ const MooneagePicturesContextProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
+    const theLeopardData = async () => {
+      const { data: show } = await axios.get(
+        "https://cms.moonagepictures.com/wp-json/wp/v2/posts/2486"
+      );
+
+      setTheLeopardData({
+        show,
+        wideImages: show.acf.wideImages,
+        loading: false,
+      });
+    };
+
+    theLeopardData();
+  }, []);
+
+  useEffect(() => {
     const fetchPeopleData = async () => {
       const { data } = await axios({
         url: "https://cms.moonagepictures.com/wp-json/wp/v2/pages/497",
@@ -288,6 +307,7 @@ const MooneagePicturesContextProvider = ({ children }) => {
     theGentlemenData,
     agggtmData,
     mysteryProspectHotelData,
+    theLeopardData,
   };
 
   return (

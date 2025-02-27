@@ -18,6 +18,7 @@ import FamousFive from "./components/pages/FamousFive";
 import TheGentlemen from "./components/pages/TheGentlemen";
 import AGGGTM from "./components/pages/AGGGTM";
 import MysteryProspectHotel from "./components/pages/MysteryProspectHotel";
+import TheLeopard from "./components/pages/TheLeopard";
 
 const Routes = () => {
   return (
@@ -39,6 +40,7 @@ const Routes = () => {
             path="/shows/mystery-prospect-hotel"
             component={MysteryProspectHotel}
           />
+          <Route path="/shows/the-leopard" component={TheLeopard} />
           <Route path="/shows" component={Shows} />
           <Route path="/people" component={People} />
           <Route path="/daydream" component={Daydream} />
